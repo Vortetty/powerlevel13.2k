@@ -1,4 +1,4 @@
-# Config file for Powerlevel10k with the style of Pure (https://github.com/sindresorhus/pure).
+# Config file for Powerlevel13.2k with the style of Pure (https://github.com/sindresorhus/pure).
 #
 # Differences from Pure:
 #
@@ -12,14 +12,14 @@
 # doesn't fit on one line, it wraps around with no attempt to shorten it.
 #
 # If you like the general style of Pure but not particularly attached to all its quirks, type
-# `p10k configure` and pick "Lean" style. This will give you slick minimalist prompt while taking
-# advantage of Powerlevel10k features that aren't present in Pure.
+# `p13.2k configure` and pick "Lean" style. This will give you slick minimalist prompt while taking
+# advantage of Powerlevel13.2k features that aren't present in Pure.
 
 # Temporarily change options.
-'builtin' 'local' '-a' 'p10k_config_opts'
-[[ ! -o 'aliases'         ]] || p10k_config_opts+=('aliases')
-[[ ! -o 'sh_glob'         ]] || p10k_config_opts+=('sh_glob')
-[[ ! -o 'no_brace_expand' ]] || p10k_config_opts+=('no_brace_expand')
+'builtin' 'local' '-a' 'p13_2k_config_opts'
+[[ ! -o 'aliases'         ]] || p13_2k_config_opts+=('aliases')
+[[ ! -o 'sh_glob'         ]] || p13_2k_config_opts+=('sh_glob')
+[[ ! -o 'no_brace_expand' ]] || p13_2k_config_opts+=('no_brace_expand')
 'builtin' 'setopt' 'no_aliases' 'no_sh_glob' 'brace_expand'
 
 () {
@@ -169,25 +169,25 @@
   #              it incompatible with your zsh configuration files.
   #   - quiet:   Enable instant prompt and don't print warnings when detecting console output
   #              during zsh initialization. Choose this if you've read and understood
-  #              https://github.com/romkatv/powerlevel10k#instant-prompt.
+  #              https://github.com/romkatv/powerlevel13.2k#instant-prompt.
   #   - verbose: Enable instant prompt and print a warning when detecting console output during
   #              zsh initialization. Choose this if you've never tried instant prompt, haven't
   #              seen the warning, or if you are unsure what this all means.
   typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
 
-  # Hot reload allows you to change POWERLEVEL9K options after Powerlevel10k has been initialized.
+  # Hot reload allows you to change POWERLEVEL9K options after Powerlevel13.2k has been initialized.
   # For example, you can type POWERLEVEL9K_BACKGROUND=red and see your prompt turn red. Hot reload
   # can slow down prompt by 1-2 milliseconds, so it's better to keep it turned off unless you
   # really need it.
   typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
 
-  # If p10k is already loaded, reload configuration.
+  # If p13.2k is already loaded, reload configuration.
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
-  (( ! $+functions[p10k] )) || p10k reload
+  (( ! $+functions[p13.2k] )) || p13.2k reload
 }
 
-# Tell `p10k configure` which file it should overwrite.
+# Tell `p13.2k configure` which file it should overwrite.
 typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
-(( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
-'builtin' 'unset' 'p10k_config_opts'
+(( ${#p13_2k_config_opts} )) && setopt ${p13_2k_config_opts[@]}
+'builtin' 'unset' 'p13_2k_config_opts'

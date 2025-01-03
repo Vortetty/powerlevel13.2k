@@ -1,16 +1,16 @@
-# Recommended font: Meslo Nerd Font patched for Powerlevel10k
+# Recommended font: Meslo Nerd Font patched for Powerlevel13.2k
 
 Gorgeous monospace font designed by Jim Lyles for Bitstream, customized by the same for Apple,
 further customized by André Berg, and finally patched by yours truly with customized scripts
 originally developed by Ryan L McIntyre of Nerd Fonts. Contains all glyphs and symbols that
-Powerlevel10k may need. Battle-tested in dozens of different terminals on all major operating
+Powerlevel13.2k may need. Battle-tested in dozens of different terminals on all major operating
 systems.
 
 *FAQ*: [How was the recommended font created?](README.md#how-was-the-recommended-font-created)
 
 ## Automatic font installation
 
-If you are using iTerm2 or Termux, `p10k configure` can install the recommended font for you.
+If you are using iTerm2 or Termux, `p13.2k configure` can install the recommended font for you.
 Simply answer `Yes` when asked whether to install *Meslo Nerd Font*.
 
 If you are using a different terminal, proceed with manual font installation. 👇
@@ -19,17 +19,17 @@ If you are using a different terminal, proceed with manual font installation. �
 
 1. Download these four ttf files:
    - [MesloLGS NF Regular.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
    - [MesloLGS NF Bold.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
    - [MesloLGS NF Italic.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
    - [MesloLGS NF Bold Italic.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 1. Double-click on each file and click "Install". This will make `MesloLGS NF` font available to all
    applications on your system.
 1. Configure your terminal to use this font:
-   - **iTerm2**: Type `p10k configure` and answer `Yes` when asked whether to install
+   - **iTerm2**: Type `p13.2k configure` and answer `Yes` when asked whether to install
      *Meslo Nerd Font*. Alternatively, open *iTerm2 → Preferences → Profiles → Text* and set *Font* to
      `MesloLGS NF`.
    - **Apple Terminal**: Open *Terminal → Preferences → Profiles → Text*, click *Change* under *Font*
@@ -40,9 +40,9 @@ If you are using a different terminal, proceed with manual font installation. �
      *Code → Preferences → Settings* (Mac), enter `terminal.integrated.fontFamily` in the search box at
      the top of *Settings* tab and set the value below to `MesloLGS NF`.
      Consult [this screenshot](
-       https://raw.githubusercontent.com/romkatv/powerlevel10k-media/389133fb8c9a2347929a23702ce3039aacc46c3d/visual-studio-code-font-settings.jpg)
+       https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/389133fb8c9a2347929a23702ce3039aacc46c3d/visual-studio-code-font-settings.jpg)
      to see how it should look like or see [this issue](
-       https://github.com/romkatv/powerlevel10k/issues/671) for extra information.
+       https://github.com/romkatv/powerlevel13.2k/issues/671) for extra information.
    - **GNOME Terminal** (the default Ubuntu terminal): Open *Terminal → Preferences* and click on the
      selected profile under *Profiles*. Check *Custom font* under *Text Appearance* and select
      `MesloLGS NF Regular`.
@@ -59,7 +59,7 @@ If you are using a different terminal, proceed with manual font installation. �
    - **IntelliJ** (and other IDEs by Jet Brains): Open *IDE → Edit → Preferences → Editor →
      Color Scheme → Console Font*. Select *Use console font instead of the default* and set the font
      name to `MesloLGS NF`.
-   - **Termux**: Type `p10k configure` and answer `Yes` when asked whether to install
+   - **Termux**: Type `p13.2k configure` and answer `Yes` when asked whether to install
      *Meslo Nerd Font*.
    - **Blink**: Type `config`, go to *Appearance*, tap *Add a new font*, tap *Open Gallery*, select
      *MesloLGS NF.css*, tap *import* and type `exit` in the home view to reload the font.
@@ -138,25 +138,25 @@ If you are using a different terminal, proceed with manual font installation. �
      ```css
      @font-face {
       font-family: "MesloLGS NF";
-      src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Regular.ttf");
+      src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Regular.ttf");
       font-weight: normal;
       font-style: normal;
      }
      @font-face {
          font-family: "MesloLGS NF";
-         src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Bold.ttf");
+         src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Bold.ttf");
          font-weight: bold;
          font-style: normal;
      }
      @font-face {
          font-family: "MesloLGS NF";
-         src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Italic.ttf");
+         src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Italic.ttf");
          font-weight: normal;
          font-style: italic;
      }
      @font-face {
          font-family: "MesloLGS NF";
-         src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Bold%20Italic.ttf");
+         src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Bold%20Italic.ttf");
          font-weight: bold;
          font-style: italic;
      }
@@ -173,7 +173,7 @@ If you are using a different terminal, proceed with manual font installation. �
      ```text
      font-family = "MesloLGS NF"
      ```
-1. Run `p10k configure` to generate a new `~/.p10k.zsh`. The old config may work
+1. Run `p13.2k configure` to generate a new `~/.p13.2k.zsh`. The old config may work
    incorrectly with the new font.
 
 _Using a different terminal and know how to set the font for it? Share your knowledge by sending a

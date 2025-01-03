@@ -24,7 +24,7 @@ SHOW_ON_UPGLOB. how should it interact with POWERLEVEL9K_${SEGMENT}_DISABLED_DIR
 
 ---
 
-add `p10k upglob`; returns 0 on match and sets REPLY to the directory where match was found.
+add `p13.2k upglob`; returns 0 on match and sets REPLY to the directory where match was found.
 
 ---
 
@@ -68,7 +68,7 @@ POWERLEVEL9K_DIR_MAX_LENGTH and co., and truncate_to_last.
 
 ---
 
-fix a bug in zsh: https://github.com/romkatv/powerlevel10k/issues/502. to reproduce:
+fix a bug in zsh: https://github.com/romkatv/powerlevel13.2k/issues/502. to reproduce:
 
 ```zsh
 emulate zsh -o prompt_percent -c 'print -P "%F{#ff0000}red%F{green}%B bold green"'
@@ -76,7 +76,7 @@ emulate zsh -o prompt_percent -c 'print -P "%F{#ff0000}red%F{green}%B bold green
 
 ---
 
-add `p10k explain` that prints something like this:
+add `p13.2k explain` that prints something like this:
 
 ```text
 segment     icons meaning

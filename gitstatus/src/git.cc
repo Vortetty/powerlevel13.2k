@@ -136,7 +136,7 @@ size_t NumStashes(git_repository* repo) {
   };
   if (!git_stash_foreach(repo, cb, &res)) return res;
   // Example error: failed to parse signature - malformed e-mail.
-  // See https://github.com/romkatv/powerlevel10k/issues/216.
+  // See https://github.com/romkatv/powerlevel13.2k/issues/216.
   LOG(WARN) << "git_stash_foreach: " << GitError();
   return 0;
 }

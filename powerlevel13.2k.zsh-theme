@@ -1,7 +1,7 @@
 # vim:ft=zsh ts=2 sw=2 sts=2 et fenc=utf-8
 ################################################################
-# Powerlevel10k Theme
-# https://github.com/romkatv/powerlevel10k
+# Powerlevel13.2k Theme
+# https://github.com/romkatv/powerlevel13.2k
 #
 # Forked from Powerlevel9k Theme
 # https://github.com/bhilburn/powerlevel9k
@@ -53,7 +53,7 @@ function _p9k_init_locale() {
     (( $+functions[_p9k_setup] )) && _p9k_setup
     return 0
   fi
-  typeset -gr __p9k_dump_file=${XDG_CACHE_HOME:-~/.cache}/p10k-dump-${(%):-%n}.zsh
+  typeset -gr __p9k_dump_file=${XDG_CACHE_HOME:-~/.cache}/p13.2k-dump-${(%):-%n}.zsh
   if [[ $__p9k_dump_file != $__p9k_instant_prompt_dump_file ]] && (( ! $+functions[_p9k_preinit] )) && source $__p9k_dump_file 2>/dev/null && (( $+functions[_p9k_preinit] )); then
     _p9k_preinit
   fi
@@ -61,7 +61,7 @@ function _p9k_init_locale() {
   if [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]]; then
     if [[ -w $__p9k_root_dir && -w $__p9k_root_dir/internal && -w $__p9k_root_dir/gitstatus ]]; then
       local f
-      for f in $__p9k_root_dir/{powerlevel9k.zsh-theme,powerlevel10k.zsh-theme,internal/p10k.zsh,internal/icons.zsh,internal/configure.zsh,internal/worker.zsh,internal/parser.zsh,gitstatus/gitstatus.plugin.zsh,gitstatus/install}; do
+      for f in $__p9k_root_dir/{powerlevel9k.zsh-theme,powerlevel13.2k.zsh-theme,internal/p13.2k.zsh,internal/icons.zsh,internal/configure.zsh,internal/worker.zsh,internal/parser.zsh,gitstatus/gitstatus.plugin.zsh,gitstatus/install}; do
         [[ $f.zwc -nt $f ]] && continue
         zmodload -F zsh/files b:zf_mv b:zf_rm
         local tmp=$f.tmp.$$.zwc
@@ -74,7 +74,7 @@ function _p9k_init_locale() {
       done
     fi
   fi
-  builtin source $__p9k_root_dir/internal/p10k.zsh || true
+  builtin source $__p9k_root_dir/internal/p13.2k.zsh || true
 }
 
 (( $+__p9k_instant_prompt_active )) && unsetopt prompt_cr prompt_sp || setopt prompt_cr prompt_sp

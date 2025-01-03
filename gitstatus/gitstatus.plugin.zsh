@@ -38,11 +38,11 @@
 #   VCS_STATUS_PUSH_REMOTE_URL=''
 #   VCS_STATUS_REMOTE_BRANCH=master
 #   VCS_STATUS_REMOTE_NAME=origin
-#   VCS_STATUS_REMOTE_URL=git@github.com:romkatv/powerlevel10k.git
+#   VCS_STATUS_REMOTE_URL=git@github.com:romkatv/powerlevel13.2k.git
 #   VCS_STATUS_RESULT=ok-sync
 #   VCS_STATUS_STASHES=0
 #   VCS_STATUS_TAG=''
-#   VCS_STATUS_WORKDIR=/home/romka/powerlevel10k
+#   VCS_STATUS_WORKDIR=/home/romka/powerlevel13.2k
 
 [[ -o 'interactive' ]] || 'return'
 
@@ -662,7 +662,7 @@ function gitstatus_start"${1:-}"() {
 
         print -nru $req_fd -- $'}hello\x1f\x1e' || return
         local expected=$'}hello\x1f0\x1e' actual
-        if (( $+functions[p10k] )) && [[ ! -t 1 && ! -t 0 ]]; then
+        if (( $+functions[p13.2k] )) && [[ ! -t 1 && ! -t 0 ]]; then
           local -F deadline='EPOCHREALTIME + 4'
         else
           local -F deadline='1'
@@ -687,11 +687,11 @@ function gitstatus_start"${1:-}"() {
               exec 2>&$stderr_fd {stderr_fd}>&-
               stderr_fd=0
             fi
-            if (( $+functions[p10k] )); then
-              p10k clear-instant-prompt || return
+            if (( $+functions[p13.2k] )); then
+              p13.2k clear-instant-prompt || return
             fi
             if [[ $name == POWERLEVEL9K ]]; then
-              local label=powerlevel10k
+              local label=powerlevel13.2k
             else
               local label=gitstatus
             fi
@@ -773,7 +773,7 @@ function gitstatus_start"${1:-}"() {
     gitstatus_stop$fsuf $name
 
     setopt prompt_percent no_prompt_subst no_prompt_bang
-    (( $+functions[p10k] )) && p10k clear-instant-prompt
+    (( $+functions[p13.2k] )) && p13.2k clear-instant-prompt
     print -ru2  -- ''
     print -Pru2 -- '[%F{red}ERROR%f]: gitstatus failed to initialize.'
     print -ru2  -- ''

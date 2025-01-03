@@ -187,7 +187,7 @@ function _p9k_worker_start() {
     else
       local tmpdir=/tmp
     fi
-    _p9k__worker_file_prefix=$tmpdir/p10k.worker.$EUID.$sysparams[pid].$EPOCHSECONDS
+    _p9k__worker_file_prefix=$tmpdir/p13.2k.worker.$EUID.$sysparams[pid].$EPOCHSECONDS
 
     sysopen -r -o cloexec -u _p9k__worker_resp_fd <(
       exec 0</dev/null

@@ -25,12 +25,12 @@ Bash bindings for integration with shell.
 ## Using from Zsh
 
 The easiest way to take advantage of gitstatus from Zsh is to use a theme that's already integrated
-with it. For example, [Powerlevel10k](https://github.com/romkatv/powerlevel10k) is a flexible and
-fast theme with first-class gitstatus integration. If you install Powerlevel10k, you don't need to
+with it. For example, [Powerlevel13.2k](https://github.com/romkatv/powerlevel13.2k) is a flexible and
+fast theme with first-class gitstatus integration. If you install Powerlevel13.2k, you don't need to
 install gitstatus.
 
-![Powerlevel10k Zsh Theme](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png)
+![Powerlevel13.2k Zsh Theme](
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/prompt-styles-high-contrast.png)
 
 For those who wish to use gitstatus without a theme, there is
 [gitstatus.prompt.zsh](gitstatus.prompt.zsh). Install it as follows:
@@ -125,7 +125,7 @@ This snippet is sourcing `gitstatus.plugin.zsh` rather than `gitstatus.prompt.zs
 defines low-level bindings that communicate with gitstatusd over pipes. The latter is a simple
 script that uses these bindings to assemble git prompt.
 
-Unlike [Powerlevel10k](https://github.com/romkatv/powerlevel10k), code based on
+Unlike [Powerlevel13.2k](https://github.com/romkatv/powerlevel13.2k), code based on
 [gitstatus.prompt.zsh](gitstatus.prompt.zsh) is communicating with gitstatusd synchronously. This
 can make your prompt slow when working in a large git repository or on a slow machine. To avoid
 this problem, call `gitstatus_query` asynchronously as documented in
@@ -244,7 +244,7 @@ requests faster.
 
 [Zsh bindings](gitstatus.plugin.zsh) and [Bash bindings](gitstatus.plugin.sh) start gitstatusd in
 the background and communicate with it via pipes. Themes such as
-[Powerlevel10k](https://github.com/romkatv/powerlevel10k) use these bindings to put git status in
+[Powerlevel13.2k](https://github.com/romkatv/powerlevel13.2k) use these bindings to put git status in
 `PROMPT`.
 
 Note that gitstatus cannot be used as a drop-in replacement for `git status` command as it doesn't
@@ -516,10 +516,10 @@ by shell bindings automatically.
 When you update shell bindings, they may refuse to work with the binary you've built earlier. In
 this case you'll need to rebuild.
 
-If you are using gitstatus through [Powerlevel10k](https://github.com/romkatv/powerlevel10k), the
+If you are using gitstatus through [Powerlevel13.2k](https://github.com/romkatv/powerlevel13.2k), the
 instructions are the same except that you don't need to clone gitstatus. Instead, change your
-current directory to `/path/to/powerlevel10k/gitstatus` (`/path/to/powerlevel10k` is the directory
-where you've installed Powerlevel10k) and run `./build -w -s -d docker` from there as described
+current directory to `/path/to/powerlevel13.2k/gitstatus` (`/path/to/powerlevel13.2k` is the directory
+where you've installed Powerlevel13.2k) and run `./build -w -s -d docker` from there as described
 above.
 
 ### Compiling for distribution

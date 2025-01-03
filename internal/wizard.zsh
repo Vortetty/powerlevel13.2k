@@ -21,7 +21,7 @@ local -i success=0
 
 local -ri force
 
-local -r font_base_url='https://github.com/romkatv/powerlevel10k-media/raw/master'
+local -r font_base_url='https://github.com/romkatv/powerlevel13.2k-media/raw/master'
 
 local -ri prompt_indent=2
 
@@ -254,22 +254,22 @@ function quit() {
   restore_screen
   print
   if (( force )); then
-    flowing Powerlevel10k configuration wizard has been aborted. To run it again, type:
+    flowing Powerlevel13.2k configuration wizard has been aborted. To run it again, type:
     print -P ""
-    print -P "  %2Fp10k%f %Bconfigure%b"
+    print -P "  %2Fp13.2k%f %Bconfigure%b"
     print -P ""
   else
     flowing                                                                        \
-      Powerlevel10k configuration wizard has been aborted. It will run again       \
-      next time unless you define at least one Powerlevel10k configuration option. \
-      To define an option that does nothing except for disabling Powerlevel10k     \
+      Powerlevel13.2k configuration wizard has been aborted. It will run again       \
+      next time unless you define at least one Powerlevel13.2k configuration option. \
+      To define an option that does nothing except for disabling Powerlevel13.2k     \
       configuration wizard, type the following command:
     print -P ""
     print -P "  %2Fecho%f %3F'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true'%f >>! $__p9k_zshrc_u"
     print -P ""
-    flowing To run Powerlevel10k configuration wizard right now, type:
+    flowing To run Powerlevel13.2k configuration wizard right now, type:
     print -P ""
-    print -P "  %2Fp10k%f %Bconfigure%b"
+    print -P "  %2Fp13.2k%f %Bconfigure%b"
     print -P ""
   fi
   function quit() {}
@@ -318,12 +318,12 @@ function render_screen() {
           clear
           flowing -c %1FNot enough horizontal space.%f
           print
-          flowing Make terminal window %Bwider%b or press %BCtrl-C%b to abort Powerlevel10k configuration wizard.
+          flowing Make terminal window %Bwider%b or press %BCtrl-C%b to abort Powerlevel13.2k configuration wizard.
         elif (( wizard_lines < __p9k_wizard_lines )); then
           clear
           flowing -c %1FNot enough vertical space.%f
           print
-          flowing Make terminal window %Btaller%b or press %BCtrl-C%b to abort Powerlevel10k configuration wizard.
+          flowing Make terminal window %Btaller%b or press %BCtrl-C%b to abort Powerlevel13.2k configuration wizard.
         else
           break
         fi
@@ -355,7 +355,7 @@ function render_screen() {
       clear
       flowing -c %1FNot enough vertical space.%f
       print
-      flowing Make terminal window %Btaller%b or press %BCtrl-C%b to abort Powerlevel10k configuration wizard.
+      flowing Make terminal window %Btaller%b or press %BCtrl-C%b to abort Powerlevel13.2k configuration wizard.
       while (( get_columns() == wizard_columns && LINES == wizard_lines )); do
         sleep 1
       done
@@ -419,16 +419,16 @@ local -i greeting_printed=0
 function print_greeting() {
   (( greeting_printed )) && return
   if (( in_z4h_wizard )); then
-    flowing -c %3FZsh for Humans%f uses %4FPowerlevel10k%f to print command        \
+    flowing -c %3FZsh for Humans%f uses %4FPowerlevel13.2k%f to print command        \
                line prompt. This wizard will ask you a few questions and configure \
                prompt for you.
   elif (( force )); then
-    flowing -c This is %4FPowerlevel10k configuration wizard%f. \
+    flowing -c This is %4FPowerlevel13.2k configuration wizard%f. \
                It will ask you a few questions and configure your prompt.
   else
-    flowing -c This is %4FPowerlevel10k configuration wizard%f.   \
+    flowing -c This is %4FPowerlevel13.2k configuration wizard%f.   \
                You are seeing it because you haven\'t defined any \
-               Powerlevel10k configuration options. It will ask   \
+               Powerlevel13.2k configuration options. It will ask   \
                you a few questions and configure your prompt.
   fi
   print -P ""
@@ -639,9 +639,9 @@ function ask_remove_font() {
   add_widget 0 print -P ""
   if (( protected )); then
     if (( $#fonts == 1 )); then
-      add_widget 0 flowing Please %Bdelete%b this file and run '%2Fp10k%f %Bconfigure%b.'
+      add_widget 0 flowing Please %Bdelete%b this file and run '%2Fp13.2k%f %Bconfigure%b.'
     else
-      add_widget 0 flowing Please %Bdelete%b these files and run '%2Fp10k%f %Bconfigure%b.'
+      add_widget 0 flowing Please %Bdelete%b these files and run '%2Fp13.2k%f %Bconfigure%b.'
     fi
     add_widget 0 print
     restore_screen
@@ -1507,7 +1507,7 @@ function ask_empty_line() {
 }
 
 function print_instant_prompt_link() {
-  local link='https://github.com/romkatv/powerlevel10k#instant-prompt'
+  local link='https://github.com/romkatv/powerlevel13.2k#instant-prompt'
   (( wizard_columns < $#link )) && return
   print
   flowing -c "$(href $link)"
@@ -1597,7 +1597,7 @@ function ask_config_overwrite() {
   if [[ ! -e $__p9k_cfg_path ]]; then
     return 0
   fi
-  add_widget 0 flowing -c Powerlevel10k config file already exists.
+  add_widget 0 flowing -c Powerlevel13.2k config file already exists.
   add_widget 0 flowing -c "%BOverwrite" "%b%2F${__p9k_cfg_path_u//\\/\\\\}%f%B?%b"
   add_widget 0 print -P ""
   add_widget 0 print -P "%B(y)  Yes.%b"
@@ -1707,7 +1707,7 @@ function ask_zshrc_edit() {
 }
 
 function generate_config() {
-  local base && base="$(<$__p9k_root_dir/config/p10k-${style//_/-}.zsh)" || return
+  local base && base="$(<$__p9k_root_dir/config/p13.2k-${style//_/-}.zsh)" || return
   local lines=("${(@f)base}")
 
   function sub() {
@@ -1932,8 +1932,8 @@ function generate_config() {
   sub INSTANT_PROMPT $instant_prompt
   (( transient_prompt )) && sub TRANSIENT_PROMPT always
 
-  local header=${(%):-"# Generated by Powerlevel10k configuration wizard on %D{%Y-%m-%d at %H:%M %Z}."}$'\n'
-  header+="# Based on romkatv/powerlevel10k/config/p10k-${style//_/-}.zsh"
+  local header=${(%):-"# Generated by Powerlevel13.2k configuration wizard on %D{%Y-%m-%d at %H:%M %Z}."}$'\n'
+  header+="# Based on romkatv/powerlevel13.2k/config/p13.2k-${style//_/-}.zsh"
   if [[ $commands[sum] == ('/bin'|'/usr/bin'|'/usr/local/bin')'/sum' ]]; then
     local -a sum
     if sum=($(sum <<<${base//$'\r\n'/$'\n'} 2>/dev/null)) && (( $#sum == 2 )); then
@@ -1953,7 +1953,7 @@ function generate_config() {
     fi
   done
   header+=$line
-  header+=$'.\n# Type `p10k configure` to generate another config.\n#'
+  header+=$'.\n# Type `p13.2k configure` to generate another config.\n#'
 
   command mkdir -p -- ${__p9k_cfg_path:h} || return
 
@@ -1979,11 +1979,11 @@ function change_zshrc() {
     print -n >$tmp || return
 
     if (( !zshrc_has_instant_prompt )); then
-      >>$tmp print -r -- "# Enable Powerlevel10k instant prompt. Should stay close to the top of ${(%)__p9k_zshrc_u}.
+      >>$tmp print -r -- "# Enable Powerlevel13.2k instant prompt. Should stay close to the top of ${(%)__p9k_zshrc_u}.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r \"\${XDG_CACHE_HOME:-\$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh\" ]]; then
-  source \"\${XDG_CACHE_HOME:-\$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh\"
+if [[ -r \"\${XDG_CACHE_HOME:-\$HOME/.cache}/p13.2k-instant-prompt-\${(%):-%n}.zsh\" ]]; then
+  source \"\${XDG_CACHE_HOME:-\$HOME/.cache}/p13.2k-instant-prompt-\${(%):-%n}.zsh\"
 fi" || return
     fi
     if [[ -n $zshrc_content ]]; then
@@ -1992,7 +1992,7 @@ fi" || return
     fi
     if (( !zshrc_has_cfg )); then
       >>$tmp print -r -- "
-# To customize prompt, run \`p10k configure\` or edit ${(%)__p9k_cfg_path_u}.
+# To customize prompt, run \`p13.2k configure\` or edit ${(%)__p9k_cfg_path_u}.
 [[ ! -f ${(%)__p9k_cfg_path_u} ]] || source ${(%)__p9k_cfg_path_u}" || return
     fi
     (( writable )) || chmod u-w -- $tmp || return
@@ -2022,22 +2022,22 @@ function check_zshrc_integration() {
   local f3=${(qq)f0}
   local f4=${(qqq)f0}
   local g1=${${(q)__p9k_cfg_path_o}/#(#b)${(q)HOME}\//'~/'}
-  local h0='${ZDOTDIR:-~}/.p10k.zsh'
-  local h1='${ZDOTDIR:-$HOME}/.p10k.zsh'
-  local h2='"${ZDOTDIR:-$HOME}/.p10k.zsh"'
-  local h3='"${ZDOTDIR:-$HOME}"/.p10k.zsh'
-  local h4='${ZDOTDIR}/.p10k.zsh'
-  local h5='"${ZDOTDIR}/.p10k.zsh"'
-  local h6='"${ZDOTDIR}"/.p10k.zsh'
-  local h7='$ZDOTDIR/.p10k.zsh'
-  local h8='"$ZDOTDIR/.p10k.zsh"'
-  local h9='"$ZDOTDIR"/.p10k.zsh'
+  local h0='${ZDOTDIR:-~}/.p13.2k.zsh'
+  local h1='${ZDOTDIR:-$HOME}/.p13.2k.zsh'
+  local h2='"${ZDOTDIR:-$HOME}/.p13.2k.zsh"'
+  local h3='"${ZDOTDIR:-$HOME}"/.p13.2k.zsh'
+  local h4='${ZDOTDIR}/.p13.2k.zsh'
+  local h5='"${ZDOTDIR}/.p13.2k.zsh"'
+  local h6='"${ZDOTDIR}"/.p13.2k.zsh'
+  local h7='$ZDOTDIR/.p13.2k.zsh'
+  local h8='"$ZDOTDIR/.p13.2k.zsh"'
+  local h9='"$ZDOTDIR"/.p13.2k.zsh'
   local h10='$POWERLEVEL9K_CONFIG_FILE'
   local h11='"$POWERLEVEL9K_CONFIG_FILE"'
   if [[ -n ${(@M)lines:#(#b)[^#]#([^[:IDENT:]]|)source[[:space:]]##(|--[[:space:]]##)($f1|$f2|$f3|$f4|$g1|$h0|$h1|$h2|$h3|$h4|$h5|$h6|$h7|$h8|$h9|$h10|$h11)(|[[:space:]]*|'#'*)} ]]; then
     zshrc_has_cfg=1
   fi
-  local pre='${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh'
+  local pre='${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh'
   if [[ -n ${(@M)lines:#(#b)[^#]#([^[:IDENT:]]|)source[[:space:]]##($pre|\"$pre\")(|[[:space:]]*|'#'*)} ]]; then
     zshrc_has_instant_prompt=1
   fi
@@ -2053,12 +2053,12 @@ function check_zshrc_integration() {
   [[ -s $__p9k_cfg_path ]] || return 0
   print -P ""
   flowing                                                                          \
-      Powerlevel10k configuration file "($__p9k_cfg_path_u)" was not sourced. This \
+      Powerlevel13.2k configuration file "($__p9k_cfg_path_u)" was not sourced. This \
       might have been caused by errors in zsh startup files, most likely in        \
       $__p9k_zshrc_u. See above for any indication of such errors and fix them. If \
-      there are no errors, try running Powerlevel10k configuration wizard:
+      there are no errors, try running Powerlevel13.2k configuration wizard:
   print -P ''
-  print -P '  %2Fp10k%f %Bconfigure%b'
+  print -P '  %2Fp13.2k%f %Bconfigure%b'
   print -P ''
   flowing                                                                              \
       If you do nothing, you will see this message again when you start zsh. You can   \
@@ -2242,7 +2242,7 @@ change_zshrc    || return
 
 if (( !in_z4h_wizard )); then
   print -rP ""
-  flowing +c File feature requests and bug reports at "$(href https://github.com/romkatv/powerlevel10k/issues)"
+  flowing +c File feature requests and bug reports at "$(href https://github.com/romkatv/powerlevel13.2k/issues)"
   print -rP ""
 fi
 

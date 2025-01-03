@@ -2,7 +2,7 @@
 #
 # This file is used by ./install and indirectly by shell bindings.
 #
-# The first line is read by powerlevel10k instant prompt. It must
+# The first line is read by powerlevel13.2k instant prompt. It must
 # be updated whenever the content of this file changes. The actual
 # value doesn't matter as long as it's unique. Consecutive integers
 # work fine.

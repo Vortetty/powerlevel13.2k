@@ -219,7 +219,7 @@ void TagDb::ParsePack() {
   //   # pack-refs with: peeled fully-peeled sorted
   //
   // However, some users can produce pack-refs without this line.
-  // See https://github.com/romkatv/powerlevel10k/issues/1428.
+  // See https://github.com/romkatv/powerlevel13.2k/issues/1428.
   // I don't know how they do it. Without the header line we cannot
   // assume that refs are sorted, which isn't a big deal because we
   // can just sort them. What's worse is that refs cannot be assumed

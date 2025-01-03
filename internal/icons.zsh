@@ -489,7 +489,7 @@ function _p9k_init_icons() {
     'nerdfont-v3')
       # In this version of Nerd Fonts the Material icons are mapped to U+F0001-U+F19C3.
       # The font may also have Material icons in the old range of U+F500-U+FD46 but
-      # powerlevel10k won't rely on them.
+      # powerlevel13.2k won't rely on them.
       icons=(
         RULER_CHAR                     '\u2500'               # ─
         LEFT_SEGMENT_SEPARATOR         '\uE0B0'               # 

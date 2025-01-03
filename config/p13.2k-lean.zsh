@@ -1,4 +1,4 @@
-# Config for Powerlevel10k with lean prompt style. Type `p10k configure` to generate
+# Config for Powerlevel13.2k with lean prompt style. Type `p13.2k configure` to generate
 # your own config based on it.
 #
 # Tip: Looking for a nice color? Here's a one-liner to print colormap.
@@ -6,17 +6,17 @@
 #   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 
 # Temporarily change options.
-'builtin' 'local' '-a' 'p10k_config_opts'
-[[ ! -o 'aliases'         ]] || p10k_config_opts+=('aliases')
-[[ ! -o 'sh_glob'         ]] || p10k_config_opts+=('sh_glob')
-[[ ! -o 'no_brace_expand' ]] || p10k_config_opts+=('no_brace_expand')
+'builtin' 'local' '-a' 'p13_2k_config_opts'
+[[ ! -o 'aliases'         ]] || p13_2k_config_opts+=('aliases')
+[[ ! -o 'sh_glob'         ]] || p13_2k_config_opts+=('sh_glob')
+[[ ! -o 'no_brace_expand' ]] || p13_2k_config_opts+=('no_brace_expand')
 'builtin' 'setopt' 'no_aliases' 'no_sh_glob' 'brace_expand'
 
 () {
   emulate -L zsh -o extended_glob
 
   # Unset all configuration options. This allows you to apply configuration changes without
-  # restarting zsh. Edit ~/.p10k.zsh and type `source ~/.p10k.zsh`.
+  # restarting zsh. Edit ~/.p13.2k.zsh and type `source ~/.p13.2k.zsh`.
   unset -m '(POWERLEVEL9K_*|DEFAULT_USER)~POWERLEVEL9K_GITSTATUS_DIR'
 
   # Zsh >= 5.1 is required.
@@ -110,7 +110,7 @@
     # example               # example user-defined segment (see prompt_example function below)
   )
 
-  # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
+  # Defines character set used by powerlevel13.2k. It's best to let `p13.2k configure` set it for you.
   typeset -g POWERLEVEL9K_MODE=nerdfont-complete
   # When set to `moderate`, some icons will have an extra space after them. This is meant to avoid
   # icon overlap when using non-monospace fonts. When set to `none`, spaces are not added.
@@ -498,7 +498,7 @@
   typeset -g POWERLEVEL9K_VCS_BACKENDS=(git)
 
   # These settings are used for repositories other than Git or when gitstatusd fails and
-  # Powerlevel10k has to fall back to using vcs_info.
+  # Powerlevel13.2k has to fall back to using vcs_info.
   typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=76
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=76
   typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=178
@@ -1646,25 +1646,25 @@
   # prompt if `example` prompt segment is added to POWERLEVEL9K_LEFT_PROMPT_ELEMENTS or
   # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS. It displays an icon and orange text greeting the user.
   #
-  # Type `p10k help segment` for documentation and a more sophisticated example.
+  # Type `p13.2k help segment` for documentation and a more sophisticated example.
   function prompt_example() {
-    p10k segment -f 208 -i '⭐' -t 'hello, %n'
+    p13.2k segment -f 208 -i '⭐' -t 'hello, %n'
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See
-  # https://github.com/romkatv/powerlevel10k#instant-prompt.
+  # https://github.com/romkatv/powerlevel13.2k#instant-prompt.
   #
-  # Powerlevel10k will call instant_prompt_* at the same time as the regular prompt_* function
-  # and will record all `p10k segment` calls it makes. When displaying instant prompt, Powerlevel10k
+  # Powerlevel13.2k will call instant_prompt_* at the same time as the regular prompt_* function
+  # and will record all `p13.2k segment` calls it makes. When displaying instant prompt, Powerlevel13.2k
   # will replay these calls without actually calling instant_prompt_*. It is imperative that
-  # instant_prompt_* always makes the same `p10k segment` calls regardless of environment. If this
+  # instant_prompt_* always makes the same `p13.2k segment` calls regardless of environment. If this
   # rule is not observed, the content of instant prompt will be incorrect.
   #
   # Usually, you should either not define instant_prompt_* or simply call prompt_* from it. If
   # instant_prompt_* is not defined for a segment, the segment won't be shown in instant prompt.
   function instant_prompt_example() {
-    # Since prompt_example always makes the same `p10k segment` calls, we can call it from
+    # Since prompt_example always makes the same `p13.2k segment` calls, we can call it from
     # instant_prompt_example. This will give us the same `example` prompt segment in the instant
     # and regular prompts.
     prompt_example
@@ -1689,25 +1689,25 @@
   #              it incompatible with your zsh configuration files.
   #   - quiet:   Enable instant prompt and don't print warnings when detecting console output
   #              during zsh initialization. Choose this if you've read and understood
-  #              https://github.com/romkatv/powerlevel10k#instant-prompt.
+  #              https://github.com/romkatv/powerlevel13.2k#instant-prompt.
   #   - verbose: Enable instant prompt and print a warning when detecting console output during
   #              zsh initialization. Choose this if you've never tried instant prompt, haven't
   #              seen the warning, or if you are unsure what this all means.
   typeset -g POWERLEVEL9K_INSTANT_PROMPT=verbose
 
-  # Hot reload allows you to change POWERLEVEL9K options after Powerlevel10k has been initialized.
+  # Hot reload allows you to change POWERLEVEL9K options after Powerlevel13.2k has been initialized.
   # For example, you can type POWERLEVEL9K_BACKGROUND=red and see your prompt turn red. Hot reload
   # can slow down prompt by 1-2 milliseconds, so it's better to keep it turned off unless you
   # really need it.
   typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
 
-  # If p10k is already loaded, reload configuration.
+  # If p13.2k is already loaded, reload configuration.
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
-  (( ! $+functions[p10k] )) || p10k reload
+  (( ! $+functions[p13.2k] )) || p13.2k reload
 }
 
-# Tell `p10k configure` which file it should overwrite.
+# Tell `p13.2k configure` which file it should overwrite.
 typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
-(( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
-'builtin' 'unset' 'p10k_config_opts'
+(( ${#p13_2k_config_opts} )) && setopt ${p13_2k_config_opts[@]}
+'builtin' 'unset' 'p13_2k_config_opts'

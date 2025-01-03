@@ -1,6 +1,6 @@
 if [[ $__p9k_sourced != 13 ]]; then
   >&2 print -P ""
-  >&2 print -P "[%F{1}ERROR%f]: Corrupted powerlevel10k installation."
+  >&2 print -P "[%F{1}ERROR%f]: Corrupted powerlevel13.2k installation."
   >&2 print -P ""
   if (( ${+functions[antigen]} )); then
     >&2 print -P "If using %Bantigen%b, run the following command to fix:"
@@ -14,7 +14,7 @@ if [[ $__p9k_sourced != 13 ]]; then
     fi
   else
     >&2 print -P "Try resetting cache in your plugin manager or"
-    >&2 print -P "reinstalling powerlevel10k from scratch."
+    >&2 print -P "reinstalling powerlevel13.2k from scratch."
   fi
   >&2 print -P ""
   return 1
@@ -22,7 +22,7 @@ fi
 
 if [[ $ZSH_VERSION != (5.<1->*|<6->.*) ]]; then
   () {
-    >&2 echo -E "You are using ZSH version $ZSH_VERSION. The minimum required version for Powerlevel10k is 5.1."
+    >&2 echo -E "You are using ZSH version $ZSH_VERSION. The minimum required version for Powerlevel13.2k is 5.1."
     >&2 echo -E "Type 'echo \$ZSH_VERSION' to see your current zsh version."
     local def=${SHELL:c:A}
     local cur=${${ZSH_ARGZERO#-}:c:A}
@@ -1099,7 +1099,7 @@ _p9k_right_prompt_segment() {
 }
 
 function _p9k_prompt_segment() { "_p9k_${_p9k__prompt_side}_prompt_segment" "$@" }
-function p9k_prompt_segment() { p10k segment "$@" }
+function p9k_prompt_segment() { p13.2k segment "$@" }
 
 function _p9k_python_version() {
   case $commands[python] in
@@ -1411,7 +1411,7 @@ _p9k_prompt_battery_set_args() {
       local dir
       for dir in $bats; do
         _p9k_read_file $dir/status(N) && local bat_status=$_p9k__ret || continue
-        # Skip batteries with "Unknown" status: https://github.com/romkatv/powerlevel10k/pull/2562.
+        # Skip batteries with "Unknown" status: https://github.com/romkatv/powerlevel13.2k/pull/2562.
         [[ $bat_status == Unknown ]] && continue
         local -i pow=0 full=0
         if _p9k_read_file $dir/(energy_full|charge_full|charge_counter)(N); then
@@ -2321,7 +2321,7 @@ prompt_laravel_version() {
     local v="$(php $dir/artisan --version 2> /dev/null)"
     v="${${(M)v:#Laravel Framework *}#Laravel Framework }"
     # In some versions the output is colorized.
-    # https://github.com/romkatv/powerlevel10k/issues/2534
+    # https://github.com/romkatv/powerlevel13.2k/issues/2534
     v=${${v#$'\e['<->m}%$'\e['<->m}
     _p9k_cache_stat_set "$v"
   fi
@@ -2472,7 +2472,7 @@ _p9k_prompt_node_version_init() {
 }
 
 # Almost the same as `nvm_version default` but faster. The differences shouldn't affect
-# the observable behavior of Powerlevel10k.
+# the observable behavior of Powerlevel13.2k.
 function _p9k_nvm_ls_default() {
   local v=default
   local -a seen=($v)
@@ -5265,7 +5265,7 @@ function _p9k_taskwarrior_init_data() {
     ts=($(command task +PENDING -OVERDUE list rc.verbose=nothing rc.color=0 rc._forcecolor=0 \
       rc.report.list.labels= rc.report.list.columns=due.epoch </dev/null 2>/dev/null)) || ts=()
     # The second condition is a workaround for a bug in taskwarrior v3.0.1.
-    # https://github.com/romkatv/powerlevel10k/issues/2648.
+    # https://github.com/romkatv/powerlevel13.2k/issues/2648.
     if (( $#ts && ! ${#${(@)ts:#(|-)<->(|.<->)}} )); then
       _p9k_taskwarrior_next_due=${${(on)ts}[1]}
       (( _p9k_taskwarrior_next_due > EPOCHSECONDS )) || _p9k_taskwarrior_next_due=$((EPOCHSECONDS+60))
@@ -5351,7 +5351,7 @@ _p9k_prompt_wifi_async() {
       done
       [[ $state == running && $rssi == (0|-<->) && $noise == (0|-<->) ]] || return 0
     elif [[ -r /proc/net/wireless && -n $commands[iw] ]]; then
-      # Content example (https://github.com/romkatv/powerlevel10k/pull/973#issuecomment-680251804):
+      # Content example (https://github.com/romkatv/powerlevel13.2k/pull/973#issuecomment-680251804):
       #
       # Inter-| sta-|   Quality        |   Discarded packets               | Missed | WE
       #  face | tus | link level noise |  nwid  crypt   frag  retry   misc | beacon | 22
@@ -5365,7 +5365,7 @@ _p9k_prompt_wifi_async() {
       rssi=${parts[4]%.*}
       noise=${parts[5]%.*}
       [[ -n $iface && $state == 0## && $rssi == (0|-<->) && $noise == (0|-<->) ]] || return 0
-      # Output example (https://github.com/romkatv/powerlevel10k/pull/973#issuecomment-680251804):
+      # Output example (https://github.com/romkatv/powerlevel13.2k/pull/973#issuecomment-680251804):
       #
       # Connected to 74:83:c2:be:76:da (on wlp3s0)
       # 	SSID: DailyGrindGuest1
@@ -5805,7 +5805,7 @@ _p9k_prompt_per_directory_history_init() {
 }
 
 # Use two preexec hooks to survive https://github.com/MichaelAquilina/zsh-you-should-use with
-# YSU_HARDCORE=1. See https://github.com/romkatv/powerlevel10k/issues/427.
+# YSU_HARDCORE=1. See https://github.com/romkatv/powerlevel13.2k/issues/427.
 _p9k_preexec1() {
   _p9k_restore_special_params
   unset __p9k_trapint
@@ -6164,8 +6164,8 @@ typeset -gri __p9k_instant_prompt_version=47
 _p9k_dump_instant_prompt() {
   local user=${(%):-%n}
   local root_dir=${__p9k_dump_file:h}
-  local prompt_dir=${root_dir}/p10k-$user
-  local root_file=$root_dir/p10k-instant-prompt-$user.zsh
+  local prompt_dir=${root_dir}/p13.2k-$user
+  local root_file=$root_dir/p13.2k-instant-prompt-$user.zsh
   local prompt_file=$prompt_dir/prompt-${#_p9k__cwd}
   [[ -d $prompt_dir ]] || mkdir -p $prompt_dir || return
   [[ -w $root_dir && -w $prompt_dir ]] || return
@@ -6265,7 +6265,7 @@ _p9k_dump_instant_prompt() {
   local -i _p9k__empty_line_i=3 _p9k__ruler_i=3
   local -A _p9k_display_k=('${(j: :)${(@q)${(kv)_p9k_display_k}}}')
   local -a _p9k__display_v=('${(j: :)${(@q)display_v}}')
-  function p10k() {
+  function p13.2k() {
     '$__p9k_intro'
     [[ $1 == display ]] || return
     shift
@@ -6323,25 +6323,25 @@ _p9k_dump_instant_prompt() {
       if (( _POWERLEVEL9K_SHOW_RULER )); then
         >&$fd print -r -- '[[ $P9K_TTY == old ]] && { unset _p9k__ruler_i; _p9k__display_v[4]=print }'
       fi
-      if (( $+functions[p10k-on-init] )); then
+      if (( $+functions[p13.2k-on-init] )); then
         >&$fd print -r -- '
-  p10k-on-init() { '$functions[p10k-on-init]' }'
+  p13.2k-on-init() { '$functions[p13.2k-on-init]' }'
       fi
-      if (( $+functions[p10k-on-pre-prompt] )); then
+      if (( $+functions[p13.2k-on-pre-prompt] )); then
         >&$fd print -r -- '
-  p10k-on-pre-prompt() { '$functions[p10k-on-pre-prompt]' }'
+  p13.2k-on-pre-prompt() { '$functions[p13.2k-on-pre-prompt]' }'
       fi
-      if (( $+functions[p10k-on-post-prompt] )); then
+      if (( $+functions[p13.2k-on-post-prompt] )); then
         >&$fd print -r -- '
-  p10k-on-post-prompt() { '$functions[p10k-on-post-prompt]' }'
+  p13.2k-on-post-prompt() { '$functions[p13.2k-on-post-prompt]' }'
       fi
-      if (( $+functions[p10k-on-post-widget] )); then
+      if (( $+functions[p13.2k-on-post-widget] )); then
         >&$fd print -r -- '
-  p10k-on-post-widget() { '$functions[p10k-on-post-widget]' }'
+  p13.2k-on-post-widget() { '$functions[p13.2k-on-post-widget]' }'
       fi
-      if (( $+functions[p10k-on-init] )); then
+      if (( $+functions[p13.2k-on-init] )); then
         >&$fd print -r -- '
-  p10k-on-init'
+  p13.2k-on-init'
       fi
       local pat idx var
       for pat idx var in $_p9k_show_on_command; do
@@ -6349,31 +6349,31 @@ _p9k_dump_instant_prompt() {
   local $var=
   _p9k__display_v[$idx]=hide"
       done
-      if (( $+functions[p10k-on-pre-prompt] )); then
+      if (( $+functions[p13.2k-on-pre-prompt] )); then
         >&$fd print -r -- '
-  p10k-on-pre-prompt'
+  p13.2k-on-pre-prompt'
       fi
-      if (( $+functions[p10k-on-init] )); then
+      if (( $+functions[p13.2k-on-init] )); then
         >&$fd print -r -- '
-  unfunction p10k-on-init'
+  unfunction p13.2k-on-init'
       fi
-      if (( $+functions[p10k-on-pre-prompt] )); then
+      if (( $+functions[p13.2k-on-pre-prompt] )); then
         >&$fd print -r -- '
-  unfunction p10k-on-pre-prompt'
+  unfunction p13.2k-on-pre-prompt'
       fi
-      if (( $+functions[p10k-on-post-prompt] )); then
+      if (( $+functions[p13.2k-on-post-prompt] )); then
         >&$fd print -r -- '
-  unfunction p10k-on-post-prompt'
+  unfunction p13.2k-on-post-prompt'
       fi
-      if (( $+functions[p10k-on-post-widget] )); then
+      if (( $+functions[p13.2k-on-post-widget] )); then
         >&$fd print -r -- '
-  unfunction p10k-on-post-widget'
+  unfunction p13.2k-on-post-widget'
       fi
       >&$fd print -r -- '
   () {
 '$functions[_p9k_init_toolbox]'
   }
-  trap "unset -m _p9k__\*; unfunction p10k" EXIT
+  trap "unset -m _p9k__\*; unfunction p13.2k" EXIT
   local -a _p9k_t=("${(@ps:$us:)${tail%%$rs*}}")
   if [[ $+VTE_VERSION == 1 || $TERM_PROGRAM == Hyper ]] && (( $+commands[stty] )); then
     if [[ $TERM_PROGRAM == Hyper ]]; then
@@ -6465,7 +6465,7 @@ _p9k_dump_instant_prompt() {
   else
     local tmpdir=/tmp
   fi
-  typeset -g __p9k_instant_prompt_output=$tmpdir/p10k-instant-prompt-output-${(%):-%n}-$$
+  typeset -g __p9k_instant_prompt_output=$tmpdir/p13.2k-instant-prompt-output-${(%):-%n}-$$
   { : > $__p9k_instant_prompt_output } || return
   print -rn -- "${out}${esc}?2004h" || return
   if (( $+commands[stty] )); then
@@ -6480,7 +6480,7 @@ _p9k_dump_instant_prompt() {
     typeset -g _z4h_saved_screen
     -z4h-save-screen
   fi
-  typeset -g __p9k_instant_prompt_dump_file=${XDG_CACHE_HOME:-~/.cache}/p10k-dump-${(%):-%n}.zsh
+  typeset -g __p9k_instant_prompt_dump_file=${XDG_CACHE_HOME:-~/.cache}/p13.2k-dump-${(%):-%n}.zsh
   if builtin source $__p9k_instant_prompt_dump_file 2>/dev/null && (( $+functions[_p9k_preinit] )); then
     _p9k_preinit
   fi
@@ -6509,7 +6509,7 @@ _p9k_dump_instant_prompt() {
     zmodload -F zsh/files b:zf_rm || return
     local user=${(%):-%n}
     local root_dir=${__p9k_instant_prompt_dump_file:h}
-    zf_rm -f -- $__p9k_instant_prompt_output $__p9k_instant_prompt_dump_file{,.zwc} $root_dir/p10k-instant-prompt-$user.zsh{,.zwc} $root_dir/p10k-$user/prompt-*(N) 2>/dev/null
+    zf_rm -f -- $__p9k_instant_prompt_output $__p9k_instant_prompt_dump_file{,.zwc} $root_dir/p13.2k-instant-prompt-$user.zsh{,.zwc} $root_dir/p13.2k-$user/prompt-*(N) 2>/dev/null
   }
   function _p9k_instant_prompt_precmd_first() {
     '$__p9k_intro'
@@ -6644,7 +6644,7 @@ function _p9k_dump_state() {
 function _p9k_delete_instant_prompt() {
   local user=${(%):-%n}
   local root_dir=${__p9k_dump_file:h}
-  zf_rm -f -- $root_dir/p10k-instant-prompt-$user.zsh{,.zwc} ${root_dir}/p10k-$user/prompt-*(N) 2>/dev/null
+  zf_rm -f -- $root_dir/p13.2k-instant-prompt-$user.zsh{,.zwc} ${root_dir}/p13.2k-$user/prompt-*(N) 2>/dev/null
 }
 
 function _p9k_restore_state() {
@@ -6710,7 +6710,7 @@ function _p9k_clear_instant_prompt() {
           echo -E - ""
           echo -E - "${(%):-[%3FWARNING%f]: Console output during zsh initialization detected.}"
           echo -E - ""
-          echo -E - "${(%):-When using Powerlevel10k with instant prompt, console output during zsh}"
+          echo -E - "${(%):-When using Powerlevel13.2k with instant prompt, console output during zsh}"
           echo -E - "${(%):-initialization may indicate issues.}"
           echo -E - ""
           echo -E - "${(%):-You can:}"
@@ -6721,7 +6721,7 @@ function _p9k_clear_instant_prompt() {
           echo -E - "${(%):-    * You %Bwill not%b see this error message again.}"
           echo -E - "${(%):-    * Zsh will start %Bquickly%b and prompt will update %Bsmoothly%b.}"
           echo -E - ""
-          echo -E - "${(%):-  - Suppress this warning either by running %Bp10k configure%b or by manually}"
+          echo -E - "${(%):-  - Suppress this warning either by running %Bp13.2k configure%b or by manually}"
           echo -E - "${(%):-    defining the following parameter:}"
           echo -E - ""
           echo -E - "${(%):-      %3Ftypeset%f -g POWERLEVEL9K_INSTANT_PROMPT=quiet}"
@@ -6729,7 +6729,7 @@ function _p9k_clear_instant_prompt() {
           echo -E - "${(%):-    * You %Bwill not%b see this error message again.}"
           echo -E - "${(%):-    * Zsh will start %Bquickly%b but prompt will %Bjump down%b after initialization.}"
           echo -E - ""
-          echo -E - "${(%):-  - Disable instant prompt either by running %Bp10k configure%b or by manually}"
+          echo -E - "${(%):-  - Disable instant prompt either by running %Bp13.2k configure%b or by manually}"
           echo -E - "${(%):-    defining the following parameter:}"
           echo -E - ""
           echo -E - "${(%):-      %3Ftypeset%f -g POWERLEVEL9K_INSTANT_PROMPT=off}"
@@ -6744,9 +6744,9 @@ function _p9k_clear_instant_prompt() {
           echo -E - ""
           echo -E - "${(%):-For details, see:}"
           if (( _p9k_term_has_href )); then
-            echo    - "${(%):-\e]8;;https://github.com/romkatv/powerlevel10k#instant-prompt\ahttps://github.com/romkatv/powerlevel10k#instant-prompt\e]8;;\a}"
+            echo    - "${(%):-\e]8;;https://github.com/romkatv/powerlevel13.2k#instant-prompt\ahttps://github.com/romkatv/powerlevel13.2k#instant-prompt\e]8;;\a}"
           else
-            echo    - "${(%):-https://github.com/romkatv/powerlevel10k#instant-prompt}"
+            echo    - "${(%):-https://github.com/romkatv/powerlevel13.2k#instant-prompt}"
           fi
           echo -E - ""
           echo    - "${(%):-%3F-- console output produced during zsh initialization follows --%f}"
@@ -6768,14 +6768,14 @@ function _p9k_clear_instant_prompt() {
   prompt_opts=(percent subst sp cr)
   if [[ $_POWERLEVEL9K_DISABLE_INSTANT_PROMPT == 0 && $__p9k_instant_prompt_active == 2 ]]; then
     >&2 echo -E - ""
-    >&2 echo -E - "${(%):-[%1FERROR%f]: When using Powerlevel10k with instant prompt, %Bprompt_cr%b must be unset.}"
+    >&2 echo -E - "${(%):-[%1FERROR%f]: When using Powerlevel13.2k with instant prompt, %Bprompt_cr%b must be unset.}"
     >&2 echo -E - ""
     >&2 echo -E - "${(%):-You can:}"
     >&2 echo -E - ""
-    >&2 echo -E - "${(%):-  - %BRecommended%b: call %Bp10k finalize%b at the end of %B$__p9k_zshrc_u%b.}"
+    >&2 echo -E - "${(%):-  - %BRecommended%b: call %Bp13.2k finalize%b at the end of %B$__p9k_zshrc_u%b.}"
     >&2 echo -E - "${(%):-    You can do this by running the following command:}"
     >&2 echo -E - ""
-    >&2 echo -E - "${(%):-      %2Fecho%f %3F'(( ! \${+functions[p10k]\} )) || p10k finalize'%f >>! $__p9k_zshrc_u}"
+    >&2 echo -E - "${(%):-      %2Fecho%f %3F'(( ! \${+functions[p13.2k]\} )) || p13.2k finalize'%f >>! $__p9k_zshrc_u}"
     >&2 echo -E - ""
     >&2 echo -E - "${(%):-    * You %Bwill not%b see this error message again.}"
     >&2 echo -E - "${(%):-    * Zsh will start %Bquickly%b and %Bwithout%b prompt flickering.}"
@@ -6785,7 +6785,7 @@ function _p9k_clear_instant_prompt() {
     >&2 echo -E - "${(%):-    * You %Bwill not%b see this error message again.}"
     >&2 echo -E - "${(%):-    * Zsh will start %Bquickly%b and %Bwithout%b prompt flickering.}"
     >&2 echo -E - ""
-    >&2 echo -E - "${(%):-  - Disable instant prompt either by running %Bp10k configure%b or by manually}"
+    >&2 echo -E - "${(%):-  - Disable instant prompt either by running %Bp13.2k configure%b or by manually}"
     >&2 echo -E - "${(%):-    defining the following parameter:}"
     >&2 echo -E - ""
     >&2 echo -E - "${(%):-      %3Ftypeset%f -g POWERLEVEL9K_INSTANT_PROMPT=off}"
@@ -6891,7 +6891,7 @@ function _p9k_on_expand() {
       if [[ $P9K_TTY == new ]]; then
         _p9k__empty_line_i=3
         _p9k__display_v[2]=hide
-      elif [[ -z $_p9k_transient_prompt && $+functions[p10k-on-post-prompt] == 0 ]]; then
+      elif [[ -z $_p9k_transient_prompt && $+functions[p13.2k-on-post-prompt] == 0 ]]; then
         _p9k__empty_line_i=3
         _p9k__display_v[2]=print
       else
@@ -6904,7 +6904,7 @@ function _p9k_on_expand() {
       if [[ $P9K_TTY == new ]]; then
         _p9k__ruler_i=3
         _p9k__display_v[4]=hide
-      elif [[ -z $_p9k_transient_prompt && $+functions[p10k-on-post-prompt] == 0 ]]; then
+      elif [[ -z $_p9k_transient_prompt && $+functions[p13.2k-on-post-prompt] == 0 ]]; then
         _p9k__ruler_i=3
         _p9k__display_v[4]=print
       else
@@ -6924,14 +6924,14 @@ function _p9k_on_expand() {
   if (( ! _p9k__expanded )); then
     _p9k__expanded=1
 
-    (( _p9k__fully_initialized || ! $+functions[p10k-on-init] )) || p10k-on-init
+    (( _p9k__fully_initialized || ! $+functions[p13.2k-on-init] )) || p13.2k-on-init
 
     local pat idx var
     for pat idx var in $_p9k_show_on_command; do
       _p9k_display_segment $idx $var hide
     done
 
-    (( $+functions[p10k-on-pre-prompt] )) && p10k-on-pre-prompt
+    (( $+functions[p13.2k-on-pre-prompt] )) && p13.2k-on-pre-prompt
 
     if zle; then
       local -a P9K_COMMANDS=($_p9k__last_commands)
@@ -6943,10 +6943,10 @@ function _p9k_on_expand() {
           _p9k_display_segment $idx $var hide
         fi
       done
-      if (( $+functions[p10k-on-post-widget] )); then
+      if (( $+functions[p13.2k-on-post-widget] )); then
         local -h WIDGET
         unset WIDGET
-        p10k-on-post-widget
+        p13.2k-on-post-widget
       fi
     else
       if [[ $_p9k__display_v[2] == print && -n $_p9k_t[_p9k_empty_line_idx] ]]; then
@@ -7285,7 +7285,7 @@ _p9k_init_vars() {
   typeset -gi _p9k__redraw_fd
   typeset -gi _p9k__can_hide_cursor=$(( $+terminfo[civis] && $+terminfo[cnorm] ))
   if (( _p9k__can_hide_cursor )); then
-    # See https://github.com/romkatv/powerlevel10k/issues/1699
+    # See https://github.com/romkatv/powerlevel13.2k/issues/1699
     if [[ $terminfo[cnorm] == *$'\e[?25h'(|'\e'*) ]]; then
       typeset -g _p9k__cnorm=$'\e[?25h'
     else
@@ -7621,7 +7621,7 @@ _p9k_init_params() {
   #
   #   (╯°□°）╯︵ ┻━┻ ~/work/projects/important/urgent
   #
-  #   ⌂ ~/best/powerlevel10k
+  #   ⌂ ~/best/powerlevel13.2k
   _p9k_declare -a POWERLEVEL9K_DIR_CLASSES
   _p9k_declare -i POWERLEVEL9K_SHORTEN_DELIMITER_LENGTH
   _p9k_declare -e POWERLEVEL9K_SHORTEN_DELIMITER
@@ -7880,7 +7880,7 @@ function _p9k_on_widget_zle-line-finish() {
 
   _p9k__line_finished=
   (( _p9k_reset_on_line_finish )) && __p9k_reset_state=2
-  (( $+functions[p10k-on-post-prompt] )) && p10k-on-post-prompt
+  (( $+functions[p13.2k-on-post-prompt] )) && p13.2k-on-post-prompt
 
   local -i optimized
 
@@ -7945,7 +7945,7 @@ function _p9k_deschedule_redraw() {
 function _p9k_widget_hook() {
   _p9k_deschedule_redraw
 
-  if (( ${+functions[p10k-on-post-widget]} || ${#_p9k_show_on_command} )); then
+  if (( ${+functions[p13.2k-on-post-widget]} || ${#_p9k_show_on_command} )); then
     local -a P9K_COMMANDS
     if [[ "$_p9k__last_buffer" == "$PREBUFFER$BUFFER" ]]; then
       P9K_COMMANDS=(${_p9k__last_commands[@]})
@@ -7976,7 +7976,7 @@ function _p9k_widget_hook() {
       _p9k_display_segment $idx $var hide
     fi
   done
-  (( $+functions[p10k-on-post-widget] )) && p10k-on-post-widget "${@:2}"
+  (( $+functions[p13.2k-on-post-widget] )) && p13.2k-on-post-widget "${@:2}"
   (( $+functions[_p9k_on_widget_$1] )) && _p9k_on_widget_$1
   (( __p9k_reset_state == 2 )) && _p9k_reset_prompt
   __p9k_reset_state=0
@@ -8000,7 +8000,7 @@ function _p9k_widget() {
 
 function _p9k_widget_zle-line-pre-redraw-impl() {
   (( __p9k_enabled )) && [[ $CONTEXT == start ]] || return 0
-  ! (( ${+functions[p10k-on-post-widget]} || ${#_p9k_show_on_command} || _p9k__restore_prompt_fd || _p9k__redraw_fd )) &&
+  ! (( ${+functions[p13.2k-on-post-widget]} || ${#_p9k_show_on_command} || _p9k__restore_prompt_fd || _p9k__redraw_fd )) &&
       [[ ${KEYMAP:-} != vicmd ]] &&
       return
   (( PENDING || KEYS_QUEUED_COUNT )) && {
@@ -8054,7 +8054,7 @@ function _p9k_wrap_widgets() {
     else
       local tmpdir=/tmp
     fi
-    local keymap tmp=$tmpdir/p10k.bindings.$sysparams[pid]
+    local keymap tmp=$tmpdir/p13.2k.bindings.$sysparams[pid]
     {
       for keymap in $keymaps; do bindkey -M $keymap; done >$tmp
       local -aU widget_list=(
@@ -8505,7 +8505,7 @@ _p9k_init_toolbox() {
     typeset -g P9K_TOOLBOX_NAME=${name[1]}
   elif [[ -n $DISTROBOX_ENTER_PATH ]]; then
     local name=${(%):-%m}
-    # $NAME can be empty, see https://github.com/romkatv/powerlevel10k/pull/1916.
+    # $NAME can be empty, see https://github.com/romkatv/powerlevel13.2k/pull/1916.
     if [[ -n $name && $name == $NAME* ]]; then
       typeset -g P9K_TOOLBOX_NAME=$name
     fi
@@ -8529,8 +8529,8 @@ _p9k_must_init() {
   _p9k__param_pat+=$'$__p9k_sh_glob\1$__p9k_ksh_arrays\1$ITERM_SHELL_INTEGRATION_INSTALLED\1'
   _p9k__param_pat+=$'${PROMPT_EOL_MARK-%B%S%#%s%b}\1$+commands[locale]\1$langinfo[CODESET]\1'
   _p9k__param_pat+=$'${(M)VTE_VERSION:#(<1-4602>|4801)}\1$DEFAULT_USER\1$P9K_SSH\1$+commands[uname]\1'
-  _p9k__param_pat+=$'$__p9k_root_dir\1$functions[p10k-on-init]\1$functions[p10k-on-pre-prompt]\1'
-  _p9k__param_pat+=$'$functions[p10k-on-post-widget]\1$functions[p10k-on-post-prompt]\1'
+  _p9k__param_pat+=$'$__p9k_root_dir\1$functions[p13.2k-on-init]\1$functions[p13.2k-on-pre-prompt]\1'
+  _p9k__param_pat+=$'$functions[p13.2k-on-post-widget]\1$functions[p13.2k-on-post-prompt]\1'
   _p9k__param_pat+=$'$+commands[git]\1$terminfo[colors]\1${+_z4h_iterm_cmd}\1'
   _p9k__param_pat+=$'$_z4h_can_save_restore_screen'
   local MATCH
@@ -8678,7 +8678,7 @@ function _p9k_init_cacheable() {
     _p9k_color1=7
     _p9k_color2=0
   else
-    _p9k_color1=0
+    _p9k_color1=8
     _p9k_color2=7
   fi
 
@@ -9016,31 +9016,31 @@ _p9k_init() {
     fi
     {
       >&2 echo -E - ""
-      >&2 echo -E - "${(%):-[%1FERROR%f]: When using instant prompt, Powerlevel10k must be loaded before the first prompt.}"
+      >&2 echo -E - "${(%):-[%1FERROR%f]: When using instant prompt, Powerlevel13.2k must be loaded before the first prompt.}"
       >&2 echo -E - ""
       >&2 echo -E - "${(%):-You can:}"
       >&2 echo -E - ""
-      >&2 echo -E - "${(%):-  - %BRecommended%b: Change the way Powerlevel10k is loaded from %B$__p9k_zshrc_u%b.}"
+      >&2 echo -E - "${(%):-  - %BRecommended%b: Change the way Powerlevel13.2k is loaded from %B$__p9k_zshrc_u%b.}"
       if (( _p9k_term_has_href )); then
-        >&2 echo    - "${(%):-    See \e]8;;https://github.com/romkatv/powerlevel10k#installation\ahttps://github.com/romkatv/powerlevel10k#installation\e]8;;\a.}"
+        >&2 echo    - "${(%):-    See \e]8;;https://github.com/romkatv/powerlevel13.2k#installation\ahttps://github.com/romkatv/powerlevel13.2k#installation\e]8;;\a.}"
       else
-        >&2 echo    - "${(%):-    See https://github.com/romkatv/powerlevel10k#installation.}"
+        >&2 echo    - "${(%):-    See https://github.com/romkatv/powerlevel13.2k#installation.}"
       fi
       if (( $+zsh_defer_options )); then
         >&2 echo -E - ""
-        >&2 echo -E - "${(%):-    NOTE: Do not use %1Fzsh-defer%f to load %Upowerlevel10k.zsh-theme%u.}"
+        >&2 echo -E - "${(%):-    NOTE: Do not use %1Fzsh-defer%f to load %Upowerlevel13.2k.zsh-theme%u.}"
       elif (( $+functions[zinit] )); then
         >&2 echo -E - ""
-        >&2 echo -E - "${(%):-    NOTE: If using %2Fzinit%f to load %3F'romkatv/powerlevel10k'%f, %Bdo not apply%b %1Fice wait%f.}"
+        >&2 echo -E - "${(%):-    NOTE: If using %2Fzinit%f to load %3F'romkatv/powerlevel13.2k'%f, %Bdo not apply%b %1Fice wait%f.}"
       elif (( $+functions[zplugin] )); then
         >&2 echo -E - ""
-        >&2 echo -E - "${(%):-    NOTE: If using %2Fzplugin%f to load %3F'romkatv/powerlevel10k'%f, %Bdo not apply%b %1Fice wait%f.}"
+        >&2 echo -E - "${(%):-    NOTE: If using %2Fzplugin%f to load %3F'romkatv/powerlevel13.2k'%f, %Bdo not apply%b %1Fice wait%f.}"
       fi
       >&2 echo -E - ""
       >&2 echo -E - "${(%):-    * You %Bwill not%b see this error message again.}"
       >&2 echo -E - "${(%):-    * Zsh will start %Bquickly%b.}"
       >&2 echo -E - ""
-      >&2 echo -E - "${(%):-  - Disable instant prompt either by running %Bp10k configure%b or by manually}"
+      >&2 echo -E - "${(%):-  - Disable instant prompt either by running %Bp13.2k configure%b or by manually}"
       >&2 echo -E - "${(%):-    defining the following parameter:}"
       >&2 echo -E - ""
       >&2 echo -E - "${(%):-      %3Ftypeset%f -g POWERLEVEL9K_INSTANT_PROMPT=off}"
@@ -9138,7 +9138,7 @@ prompt_powerlevel9k_teardown() {
   fi
 }
 
-typeset -gr __p9k_p10k_usage="Usage: %2Fp10k%f %Bcommand%b [options]
+typeset -gr __p9k_p13_2k_usage="Usage: %2Fp13.2k%f %Bcommand%b [options]
 
 Commands:
 
@@ -9150,9 +9150,9 @@ Commands:
 
 Print help for a specific command:
 
-  %2Fp10k%f %Bhelp%b command"
+  %2Fp13.2k%f %Bhelp%b command"
 
-typeset -gr __p9k_p10k_segment_usage="Usage: %2Fp10k%f %Bsegment%b [-h] [{+|-}re] [-s state] [-b bg] [-f fg] [-i icon] [-c cond] [-t text]
+typeset -gr __p9k_p13_2k_segment_usage="Usage: %2Fp13.2k%f %Bsegment%b [-h] [{+|-}re] [-s state] [-b bg] [-f fg] [-i icon] [-c cond] [-t text]
 
 Print a user-defined prompt segment. Can be called only during prompt rendering.
 
@@ -9201,7 +9201,7 @@ Example: 'core' segment tells you if there is a file name 'core' in the current 
     else
       local state=PROTECTED
     fi
-    p10k segment -s \$state -i '⭐' -f blue -t \${size[1]}b
+    p13.2k segment -s \$state -i '⭐' -f blue -t \${size[1]}b
   }
 
 To enable this segment, add 'core' to POWERLEVEL9K_LEFT_PROMPT_ELEMENTS or
@@ -9221,29 +9221,29 @@ Example customizations:
   # Don't show file size when PROTECTED.
   POWERLEVEL9K_CORE_PROTECTED_CONTENT_EXPANSION=''"
 
-typeset -gr __p9k_p10k_configure_usage="Usage: %2Fp10k%f %Bconfigure%b
+typeset -gr __p9k_p13_2k_configure_usage="Usage: %2Fp13.2k%f %Bconfigure%b
 
 Run interactive configuration wizard."
 
-typeset -gr __p9k_p10k_reload_usage="Usage: %2Fp10k%f %Breload%b
+typeset -gr __p9k_p13_2k_reload_usage="Usage: %2Fp13.2k%f %Breload%b
 
 Reload configuration."
 
-typeset -gr __p9k_p10k_finalize_usage="Usage: %2Fp10k%f %Bfinalize%b
+typeset -gr __p9k_p13_2k_finalize_usage="Usage: %2Fp13.2k%f %Bfinalize%b
 
 Perform the final stage of initialization. Must be called at the very end of zshrc."
 
-typeset -gr __p9k_p10k_display_usage="Usage: %2Fp10k%f %Bdisplay%b part-pattern=state-list...
+typeset -gr __p9k_p13_2k_display_usage="Usage: %2Fp13.2k%f %Bdisplay%b part-pattern=state-list...
 
   Show, hide or toggle prompt parts. If called from zle, the current
   prompt is refreshed.
 
-Usage: %2Fp10k%f %Bdisplay%b -a [part-pattern]...
+Usage: %2Fp13.2k%f %Bdisplay%b -a [part-pattern]...
 
   Populate array \`reply\` with states of prompt parts matching the patterns.
   If no patterns are supplied, assume \`*\`.
 
-Usage: %2Fp10k%f %Bdisplay%b -r
+Usage: %2Fp13.2k%f %Bdisplay%b -r
 
   Redisplay prompt.
 
@@ -9281,14 +9281,14 @@ If more than one, states will rotate.
 
 Example: Bind Ctrl+P to toggle right prompt.
 
-  function toggle-right-prompt() { p10k display '*/right'=hide,show; }
+  function toggle-right-prompt() { p13.2k display '*/right'=hide,show; }
   zle -N toggle-right-prompt
   bindkey '^P' toggle-right-prompt
 
 Example: Print the current state of all prompt parts:
 
   typeset -A reply
-  p10k display -a '*'
+  p13.2k display -a '*'
   printf '%%-32s = %%q\n' \${(@kv)reply} | sort
 "
 
@@ -9297,13 +9297,13 @@ Example: Print the current state of all prompt parts:
 # 2  -- reset-prompt blocked and needed
 typeset -gi __p9k_reset_state
 
-function p10k() {
-  [[ $# != 1 || $1 != finalize ]] || { p10k-instant-prompt-finalize; return 0 }
+function p13.2k() {
+  [[ $# != 1 || $1 != finalize ]] || { p13.2k-instant-prompt-finalize; return 0 }
 
   eval "$__p9k_intro_no_reply"
 
   if (( !ARGC )); then
-    print -rP -- $__p9k_p10k_usage >&2
+    print -rP -- $__p9k_p13_2k_usage >&2
     return 1
   fi
 
@@ -9326,21 +9326,21 @@ function p10k() {
           e) expand=1;;
           +r) ref=0;;
           +e) expand=0;;
-          h) print -rP -- $__p9k_p10k_segment_usage; return 0;;
-          ?) print -rP -- $__p9k_p10k_segment_usage >&2; return 1;;
+          h) print -rP -- $__p9k_p13_2k_segment_usage; return 0;;
+          ?) print -rP -- $__p9k_p13_2k_segment_usage >&2; return 1;;
         esac
       done
       if (( OPTIND <= ARGC )); then
-        print -rP -- $__p9k_p10k_segment_usage >&2
+        print -rP -- $__p9k_p13_2k_segment_usage >&2
         return 1
       fi
       if [[ -z $_p9k__prompt_side ]]; then
-        print -rP -- "%1F[ERROR]%f %Bp10k segment%b: can be called only during prompt rendering." >&2
+        print -rP -- "%1F[ERROR]%f %Bp13.2k segment%b: can be called only during prompt rendering." >&2
         if (( !ARGC )); then
           print -rP -- ""
           print -rP -- "For help, type:" >&2
           print -rP -- ""
-          print -rP -- "  %2Fp10k%f %Bhelp%b %Bsegment%b" >&2
+          print -rP -- "  %2Fp13.2k%f %Bhelp%b %Bsegment%b" >&2
         fi
         return 1
       fi
@@ -9352,7 +9352,7 @@ function p10k() {
       ;;
     display)
       if (( ARGC == 1 )); then
-        print -rP -- $__p9k_p10k_display_usage >&2
+        print -rP -- $__p9k_p13_2k_display_usage >&2
         return 1
       fi
       shift
@@ -9368,8 +9368,8 @@ function p10k() {
             fi
           ;;
           a) dump=1;;
-          h) print -rP -- $__p9k_p10k_display_usage; return 0;;
-          ?) print -rP -- $__p9k_p10k_display_usage >&2; return 1;;
+          h) print -rP -- $__p9k_p13_2k_display_usage; return 0;;
+          ?) print -rP -- $__p9k_p13_2k_display_usage >&2; return 1;;
         esac
       done
       if (( dump )); then
@@ -9426,7 +9426,7 @@ function p10k() {
       ;;
     configure)
       if (( ARGC > 1 )); then
-        print -rP -- $__p9k_p10k_configure_usage >&2
+        print -rP -- $__p9k_p13_2k_configure_usage >&2
         return 1
       fi
       local REPLY
@@ -9435,27 +9435,27 @@ function p10k() {
       ;;
     reload)
       if (( ARGC > 1 )); then
-        print -rP -- $__p9k_p10k_reload_usage >&2
+        print -rP -- $__p9k_p13_2k_reload_usage >&2
         return 1
       fi
       (( $+_p9k__force_must_init )) || return 0
       _p9k__force_must_init=1
       ;;
     help)
-      local var=__p9k_p10k_$2_usage
+      local var=__p9k_p13_2k_$2_usage
       if (( $+parameters[$var] )); then
         print -rP -- ${(P)var}
         return 0
       elif (( ARGC == 1 )); then
-        print -rP -- $__p9k_p10k_usage
+        print -rP -- $__p9k_p13_2k_usage
         return 0
       else
-        print -rP -- $__p9k_p10k_usage >&2
+        print -rP -- $__p9k_p13_2k_usage >&2
         return 1
       fi
       ;;
     finalize)
-      print -rP -- $__p9k_p10k_finalize_usage >&2
+      print -rP -- $__p9k_p13_2k_finalize_usage >&2
       return 1
       ;;
     clear-instant-prompt)
@@ -9466,16 +9466,16 @@ function p10k() {
       return 0
       ;;
     *)
-      print -rP -- $__p9k_p10k_usage >&2
+      print -rP -- $__p9k_p13_2k_usage >&2
       return 1
       ;;
   esac
 }
 
 # Hook for zplugin.
-powerlevel10k_plugin_unload() { prompt_powerlevel9k_teardown; }
+powerlevel13.2k_plugin_unload() { prompt_powerlevel9k_teardown; }
 
-function p10k-instant-prompt-finalize() {
+function p13.2k-instant-prompt-finalize() {
   unsetopt local_options
   (( ${+__p9k_instant_prompt_active} )) && unsetopt prompt_cr prompt_sp || setopt prompt_cr prompt_sp
 }

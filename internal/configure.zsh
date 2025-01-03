@@ -11,9 +11,9 @@ typeset -gr __p9k_root_dir_u=${${${(q)__p9k_root_dir}/#(#b)${(q)HOME}(|\/*)/'~'$
 function _p9k_can_configure() {
   [[ $1 == '-q' ]] && local -i q=1 || local -i q=0
   function $0_error() {
-    (( q )) || print -rP "%1F[ERROR]%f %Bp10k configure%b: $1" >&2
+    (( q )) || print -rP "%1F[ERROR]%f %Bp13.2k configure%b: $1" >&2
   }
-  typeset -g __p9k_cfg_path_o=${POWERLEVEL9K_CONFIG_FILE:=${ZDOTDIR:-~}/.p10k.zsh}
+  typeset -g __p9k_cfg_path_o=${POWERLEVEL9K_CONFIG_FILE:=${ZDOTDIR:-~}/.p13.2k.zsh}
   typeset -g __p9k_cfg_basename=${__p9k_cfg_path_o:t}
   typeset -g __p9k_cfg_path=${__p9k_cfg_path_o:A}
   typeset -g __p9k_cfg_path_u=${${${(q)__p9k_cfg_path_o}/#(#b)${(q)HOME}(|\/*)/'~'$match[1]}//\%/%%}
@@ -48,8 +48,8 @@ function _p9k_can_configure() {
     }
     local style
     for style in lean lean-8colors classic rainbow pure; do
-      [[ -r $__p9k_root_dir/config/p10k-$style.zsh ]]                      || {
-        $0_error "$__p9k_root_dir_u/config/p10k-$style.zsh is not readable"
+      [[ -r $__p9k_root_dir/config/p13.2k-$style.zsh ]]                      || {
+        $0_error "$__p9k_root_dir_u/config/p13.2k-$style.zsh is not readable"
         return 1
       }
     done

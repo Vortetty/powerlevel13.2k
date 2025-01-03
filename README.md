@@ -1,17 +1,17 @@
-# Powerlevel10k
-[![Gitter](https://badges.gitter.im/powerlevel10k/community.svg)](
-  https://gitter.im/powerlevel10k/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+# Powerlevel13.2k
+[![Gitter](https://badges.gitter.im/powerlevel13.2k/community.svg)](
+  https://gitter.im/powerlevel13.2k/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 - **THE PROJECT HAS VERY LIMITED SUPPORT**
 - **NO NEW FEATURES ARE IN THE WORKS**
 - **MOST BUGS WILL GO UNFIXED**
 - **HELP REQUESTS WILL BE IGNORED**
 
-Powerlevel10k is a theme for Zsh. It emphasizes [speed](#uncompromising-performance),
+Powerlevel13.2k is a theme for Zsh. It emphasizes [speed](#uncompromising-performance),
 [flexibility](#extremely-customizable) and [out-of-the-box experience](#configuration-wizard).
 
-![Powerlevel10k](
-https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png)
+![Powerlevel13.2k](
+https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/prompt-styles-high-contrast.png)
 
 - [Getting started](#getting-started)
 - [Features](#features)
@@ -25,11 +25,11 @@ https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styl
 
 ## Getting started
 
-1. [Install the recommended font](#meslo-nerd-font-patched-for-powerlevel10k). *Optional but highly
+1. [Install the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k). *Optional but highly
    recommended.*
-1. [Install Powerlevel10k](#installation) itself.
+1. [Install Powerlevel13.2k](#installation) itself.
 1. Restart Zsh with `exec zsh`.
-1. Type `p10k configure` if the configuration wizard doesn't start automatically.
+1. Type `p13.2k configure` if the configuration wizard doesn't start automatically.
 
 ## Features
 
@@ -47,24 +47,24 @@ https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styl
 
 ### Configuration wizard
 
-Type `p10k configure` to access the builtin configuration wizard right from your terminal.
+Type `p13.2k configure` to access the builtin configuration wizard right from your terminal.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Configuration Wizard](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/configuration-wizard.gif)
+  ![Powerlevel13.2k Configuration Wizard](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/configuration-wizard.gif)
 </details>
 
 All styles except [Pure](#pure-compatibility) are functionally equivalent. They display the same
 information and differ only in presentation.
 
-Configuration wizard creates `~/.p10k.zsh` based on your preferences. Additional prompt
+Configuration wizard creates `~/.p13.2k.zsh` based on your preferences. Additional prompt
 customization can be done by editing this file. It has plenty of comments to help you navigate
 through configuration options.
 
-*Tip*: Install [the recommended font](#meslo-nerd-font-patched-for-powerlevel10k) before
-running `p10k configure` to unlock all prompt styles.
+*Tip*: Install [the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k) before
+running `p13.2k configure` to unlock all prompt styles.
 
 *FAQ:*
 
@@ -87,17 +87,17 @@ running `p10k configure` to unlock all prompt styles.
 
 ### Uncompromising performance
 
-When you hit *ENTER*, the next prompt appears instantly. With Powerlevel10k there is no prompt lag.
+When you hit *ENTER*, the next prompt appears instantly. With Powerlevel13.2k there is no prompt lag.
 If you install Cygwin on Raspberry Pi, `cd` into a Linux Git repository and activate enough prompt
 segments to fill four prompt lines on both sides of the screen... wait, that's just crazy and no
-one ever does that. Probably impossible, too. The point is, Powerlevel10k prompt is always fast, no
+one ever does that. Probably impossible, too. The point is, Powerlevel13.2k prompt is always fast, no
 matter what you do!
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Performance](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/performance.gif)
+  ![Powerlevel13.2k Performance](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/performance.gif)
 </details>
 
 Note how the effect of every command is instantly reflected by the very next prompt.
@@ -111,55 +111,55 @@ Note how the effect of every command is instantly reflected by the very next pro
 
 Other Zsh themes capable of displaying the same information either produce prompt lag or print
 prompt that doesn't reflect the current state of the system and then refresh it later. With
-Powerlevel10k you get fast prompt *and* up-to-date information.
+Powerlevel13.2k you get fast prompt *and* up-to-date information.
 
 *FAQ*: [Is it really fast?](#is-it-really-fast)
 
 ### Powerlevel9k compatibility
 
-Powerlevel10k understands all [Powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k)
+Powerlevel13.2k understands all [Powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k)
 configuration parameters.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Compatibility with 9k](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/9k-compatibility.gif)
+  ![Powerlevel13.2k Compatibility with 9k](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/9k-compatibility.gif)
 </details>
 
-[Migration](#installation) from Powerlevel9k to Powerlevel10k is a straightforward process. All
+[Migration](#installation) from Powerlevel9k to Powerlevel13.2k is a straightforward process. All
 your `POWERLEVEL9K` configuration parameters will still work. Prompt will look the same as before
 ([almost](
-  #does-powerlevel10k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config))
+  #does-powerlevel13.2k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config))
 but it will be [much faster](#uncompromising-performance) ([certainly](#is-it-really-fast)).
 
 *FAQ*:
 
 - [I'm using Powerlevel9k with Oh My Zsh. How do I migrate?](
     #im-using-powerlevel9k-with-oh-my-zsh-how-do-i-migrate)
-- [Does Powerlevel10k always render exactly the same prompt as Powerlevel9k given the same config?](
-    #does-powerlevel10k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
-- [What is the relationship between Powerlevel9k and Powerlevel10k?](
-    #What-is-the-relationship-between-powerlevel9k-and-powerlevel10k)
+- [Does Powerlevel13.2k always render exactly the same prompt as Powerlevel9k given the same config?](
+    #does-powerlevel13.2k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
+- [What is the relationship between Powerlevel9k and Powerlevel13.2k?](
+    #What-is-the-relationship-between-powerlevel9k-and-powerlevel13.2k)
 
 ### Pure compatibility
 
-Powerlevel10k can produce the same prompt as [Pure](https://github.com/sindresorhus/pure). Type
-`p10k configure` and select *Pure* style.
+Powerlevel13.2k can produce the same prompt as [Pure](https://github.com/sindresorhus/pure). Type
+`p13.2k configure` and select *Pure* style.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Pure Style](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/pure-style.gif)
+  ![Powerlevel13.2k Pure Style](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/pure-style.gif)
 </details>
 
-You can still use Powerlevel10k features such as [transient prompt](#transient-prompt) or
+You can still use Powerlevel13.2k features such as [transient prompt](#transient-prompt) or
 [instant prompt](#instant-prompt) when sporting Pure style.
 
-To customize prompt, edit `~/.p10k.zsh`. Powerlevel10k doesn't recognize Pure configuration
+To customize prompt, edit `~/.p13.2k.zsh`. Powerlevel13.2k doesn't recognize Pure configuration
 parameters, so you'll need to use `POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3` instead of
-`PURE_CMD_MAX_EXEC_TIME=3`, etc. All relevant parameters are in `~/.p10k.zsh`. This file has
+`PURE_CMD_MAX_EXEC_TIME=3`, etc. All relevant parameters are in `~/.p13.2k.zsh`. This file has
 plenty of comments to help you navigate through it.
 
 *FAQ:* [What is the best prompt style in the configuration wizard?](
@@ -174,24 +174,24 @@ may have noticed that it takes some time for Zsh to start.
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k No Instant Prompt](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/no-instant-prompt.gif)
+  ![Powerlevel13.2k No Instant Prompt](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/no-instant-prompt.gif)
 </details>
 
-Powerlevel10k can remove Zsh startup lag **even if it's not caused by a theme**.
+Powerlevel13.2k can remove Zsh startup lag **even if it's not caused by a theme**.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Instant Prompt](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/instant-prompt.gif)
+  ![Powerlevel13.2k Instant Prompt](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/instant-prompt.gif)
 </details>
 
-This feature is called *Instant Prompt*. You need to explicitly enable it through `p10k configure`
+This feature is called *Instant Prompt*. You need to explicitly enable it through `p13.2k configure`
 or [manually](#how-do-i-configure-instant-prompt). It does what it says on the tin -- prints prompt
 instantly upon Zsh startup allowing you to start typing while plugins are still loading.
 
-Other themes *increase* Zsh startup lag -- some by a lot, others by a just a little. Powerlevel10k
+Other themes *increase* Zsh startup lag -- some by a lot, others by a just a little. Powerlevel13.2k
 *removes* it outright.
 
 If you are curious about how *Instant Prompt* works, see
@@ -212,11 +212,11 @@ the command you are currently typing.
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Show On Command](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/show-on-command.gif)
+  ![Powerlevel13.2k Show On Command](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/show-on-command.gif)
 </details>
 
-Configs created by `p10k configure` enable show on command for several prompt segments by default.
+Configs created by `p13.2k configure` enable show on command for several prompt segments by default.
 Here's the relevant parameter for kubernetes context:
 
 ```zsh
@@ -224,20 +224,20 @@ Here's the relevant parameter for kubernetes context:
 typeset -g POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens'
 ```
 
-To customize when different prompt segments are shown, open `~/.p10k.zsh`, search for
+To customize when different prompt segments are shown, open `~/.p13.2k.zsh`, search for
 `SHOW_ON_COMMAND` and either remove these parameters to display affected segments unconditionally,
 or change their values.
 
 ### Transient prompt
 
-When *Transient Prompt* is enabled through `p10k configure`, Powerlevel10k will trim down every
+When *Transient Prompt* is enabled through `p13.2k configure`, Powerlevel13.2k will trim down every
 prompt when accepting a command line.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Transient Prompt](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/transient-prompt.gif)
+  ![Powerlevel13.2k Transient Prompt](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/transient-prompt.gif)
 </details>
 
 Transient prompt makes it much easier to copy-paste series of commands from the terminal scrollback.
@@ -248,15 +248,15 @@ prompt (with an empty line before prompt) also works great in combination with t
 
 ### Current directory that just works
 
-The current working directory is perhaps the most important prompt segment. Powerlevel10k goes to
+The current working directory is perhaps the most important prompt segment. Powerlevel13.2k goes to
 great length to highlight its important parts and to truncate it with the least loss of information
 when horizontal space gets scarce.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Directory Truncation](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/directory-truncation.gif)
+  ![Powerlevel13.2k Directory Truncation](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/directory-truncation.gif)
 </details>
 
 When the full directory doesn't fit, the leftmost segment gets truncated to its shortest unique
@@ -278,37 +278,37 @@ Directory segments are shown in one of three colors:
 
 ### Extremely customizable
 
-Powerlevel10k can be configured to look like any other Zsh theme out there.
+Powerlevel13.2k can be configured to look like any other Zsh theme out there.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Other Theme Emulation](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/other-theme-emulation.gif)
+  ![Powerlevel13.2k Other Theme Emulation](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/other-theme-emulation.gif)
 </details>
 
 [Pure](#pure-compatibility), [Powerlevel9k](#powerlevel9k-compatibility) and [robbyrussell](
-  #how-to-make-powerlevel10k-look-like-robbyrussell-oh-my-zsh-theme) emulations are built-in.
+  #how-to-make-powerlevel13.2k-look-like-robbyrussell-oh-my-zsh-theme) emulations are built-in.
 To emulate the appearance of other themes, you'll need to write a suitable configuration file. The
-best way to go about it is to run `p10k configure`, select the style that is the closest to your
-goal and then edit `~/.p10k.zsh`.
+best way to go about it is to run `p13.2k configure`, select the style that is the closest to your
+goal and then edit `~/.p13.2k.zsh`.
 
-The full range of Powerlevel10k appearance spans from spartan:
+The full range of Powerlevel13.2k appearance spans from spartan:
 
-![Powerlevel10k Spartan Style](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/spartan-style.png)
+![Powerlevel13.2k Spartan Style](
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/spartan-style.png)
 
 To ~~ridiculous~~ extravagant:
 
-![Powerlevel10k Extravagant Style](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/extravagant-style.png)
+![Powerlevel13.2k Extravagant Style](
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/extravagant-style.png)
 
 ### Batteries included
 
-Powerlevel10k comes with dozens of built-in high quality prompt segments that can display
-information from a variety of sources. When you run `p10k configure` and choose any style
+Powerlevel13.2k comes with dozens of built-in high quality prompt segments that can display
+information from a variety of sources. When you run `p13.2k configure` and choose any style
 except [Pure](#pure-compatibility), many of these segments get enabled by
-default while others can be manually enabled by opening `~/.p10k.zsh` and uncommenting them.
+default while others can be manually enabled by opening `~/.p13.2k.zsh` and uncommenting them.
 You can enable as many segments as you like. It won't slow down your prompt or Zsh startup.
 
 | Segment | Meaning |
@@ -387,14 +387,14 @@ You can enable as many segments as you like. It won't slow down your prompt or Z
 
 ### Extensible
 
-If there is no prompt segment that does what you need, implement your own. Powerlevel10k provides
+If there is no prompt segment that does what you need, implement your own. Powerlevel13.2k provides
 public API for defining segments that are as fast and as flexible as built-in ones.
 
 <details>
   <summary>Screen recording</summary>
 
-  ![Powerlevel10k Custom Segment](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/custom-segment.gif)
+  ![Powerlevel13.2k Custom Segment](
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/custom-segment.gif)
 </details>
 
 On Linux you can fetch current CPU temperature by reading `/sys/class/thermal/thermal_zone0/temp`.
@@ -402,15 +402,15 @@ The screencast shows how to define a prompt segment to display this value. Once 
 defined, you can use it like any other segment. All standard customization parameters will work for
 it out of the box.
 
-Type `p10k help segment` for reference.
+Type `p13.2k help segment` for reference.
 
 *Note*: If you modify `POWERLEVEL9K_*` parameters in an already initialized interactive shell (as
-opposed to editing `~/.p10k.zsh`), the changes might not be immediately effective. To apply the
-modifications, invoke `p10k reload`. Setting `POWERLEVEL9K_DISABLE_HOT_RELOAD=false` eliminates the
-necessity for `p10k reload` but results in a marginally slower prompt.
+opposed to editing `~/.p13.2k.zsh`), the changes might not be immediately effective. To apply the
+modifications, invoke `p13.2k reload`. Setting `POWERLEVEL9K_DISABLE_HOT_RELOAD=false` eliminates the
+necessity for `p13.2k reload` but results in a marginally slower prompt.
 
 *Tip*: Prefix names of your own segments with `my_` to avoid clashes with future versions of
-Powerlevel10k.
+Powerlevel13.2k.
 
 ## Installation
 
@@ -435,119 +435,119 @@ Powerlevel10k.
 ### Manual
 
 ```zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git ~/powerlevel13.2k
+echo 'source ~/powerlevel13.2k/powerlevel13.2k.zsh-theme' >>~/.zshrc
 ```
 
 Users in China can use the official mirror on gitee.com for faster download.<br>
 中国用户可以使用 gitee.com 上的官方镜像加速下载.
 
 ```zsh
-git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://gitee.com/romkatv/powerlevel13.2k.git ~/powerlevel13.2k
+echo 'source ~/powerlevel13.2k/powerlevel13.2k.zsh-theme' >>~/.zshrc
 ```
 
 This is the simplest kind of installation and it works even if you are using a plugin manager. Just
 make sure to disable the current theme in your plugin manager. See
-[troubleshooting](#cannot-make-powerlevel10k-work-with-my-plugin-manager) for help.
+[troubleshooting](#cannot-make-powerlevel13.2k-work-with-my-plugin-manager) for help.
 
 ### Oh My Zsh
 
 1. Clone the repository:
     ```zsh
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel13.2k
     ```
     Users in China can use the official mirror on gitee.com for faster download.<br>
     中国用户可以使用 gitee.com 上的官方镜像加速下载.
 
     ```zsh
-    git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone --depth=1 https://gitee.com/romkatv/powerlevel13.2k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel13.2k
     ```
-2. Open `~/.zshrc`, find the line that sets `ZSH_THEME`, and change its value to `"powerlevel10k/powerlevel10k"`.
+2. Open `~/.zshrc`, find the line that sets `ZSH_THEME`, and change its value to `"powerlevel13.2k/powerlevel13.2k"`.
 
 ### Prezto
 
-Add `zstyle :prezto:module:prompt theme powerlevel10k` to `~/.zpreztorc`.
+Add `zstyle :prezto:module:prompt theme powerlevel13.2k` to `~/.zpreztorc`.
 
 ### Zim
 
-Add `zmodule romkatv/powerlevel10k --use degit` to `~/.zimrc` and run `zimfw install`.
+Add `zmodule romkatv/powerlevel13.2k --use degit` to `~/.zimrc` and run `zimfw install`.
 
 ### Antibody
 
-Add `antibody bundle romkatv/powerlevel10k` to `~/.zshrc`.
+Add `antibody bundle romkatv/powerlevel13.2k` to `~/.zshrc`.
 
 ### Antidote
 
-Add `romkatv/powerlevel10k` to `~/.zsh_plugins.txt`.
+Add `romkatv/powerlevel13.2k` to `~/.zsh_plugins.txt`.
 
 ### Antigen
 
-Add `antigen theme romkatv/powerlevel10k` to `~/.zshrc`. Make sure you have `antigen apply`
+Add `antigen theme romkatv/powerlevel13.2k` to `~/.zshrc`. Make sure you have `antigen apply`
 somewhere after it.
 
 ### Zplug
 
-Add `zplug romkatv/powerlevel10k, as:theme, depth:1` to `~/.zshrc`.
+Add `zplug romkatv/powerlevel13.2k, as:theme, depth:1` to `~/.zshrc`.
 
 ### Zgen
 
-Add `zgen load romkatv/powerlevel10k powerlevel10k` to `~/.zshrc`.
+Add `zgen load romkatv/powerlevel13.2k powerlevel13.2k` to `~/.zshrc`.
 
 ### Zplugin
 
-Add `zplugin ice depth=1; zplugin light romkatv/powerlevel10k` to `~/.zshrc`.
+Add `zplugin ice depth=1; zplugin light romkatv/powerlevel13.2k` to `~/.zshrc`.
 
 The use of `depth=1` ice is optional. Other types of ice are neither recommended nor officially
-supported by Powerlevel10k.
+supported by Powerlevel13.2k.
 
 ### Zinit
 
-Add `zinit ice depth=1; zinit light romkatv/powerlevel10k` to `~/.zshrc`.
+Add `zinit ice depth=1; zinit light romkatv/powerlevel13.2k` to `~/.zshrc`.
 
 The use of `depth=1` ice is optional. Other types of ice are neither recommended nor officially
-supported by Powerlevel10k.
+supported by Powerlevel13.2k.
 
 ### Zi
 
-Add `zi ice depth=1; zi light romkatv/powerlevel10k` to `~/.zshrc`.
+Add `zi ice depth=1; zi light romkatv/powerlevel13.2k` to `~/.zshrc`.
 
 The use of `depth=1` ice is optional. Other types of ice are neither recommended nor officially
-supported by Powerlevel10k.
+supported by Powerlevel13.2k.
 
 ### Zap
 
-Add `plug "romkatv/powerlevel10k"` to `~/.zshrc`.
+Add `plug "romkatv/powerlevel13.2k"` to `~/.zshrc`.
 
 ### Homebrew
 
 ```zsh
-brew install powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+brew install powerlevel13.2k
+echo "source $(brew --prefix)/share/powerlevel13.2k/powerlevel13.2k.zsh-theme" >>~/.zshrc
 ```
 
 ### Arch Linux
 
 ```zsh
-yay -S --noconfirm zsh-theme-powerlevel10k-git
-echo 'source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+yay -S --noconfirm zsh-theme-powerlevel13.2k-git
+echo 'source /usr/share/zsh-theme-powerlevel13.2k/powerlevel13.2k.zsh-theme' >>~/.zshrc
 ```
 
-[zsh-theme-powerlevel10k-git](https://aur.archlinux.org/packages/zsh-theme-powerlevel10k-git/)
-referenced above is the official Powerlevel10k package.
+[zsh-theme-powerlevel13.2k-git](https://aur.archlinux.org/packages/zsh-theme-powerlevel13.2k-git/)
+referenced above is the official Powerlevel13.2k package.
 
 ### Alpine Linux
 
 ```zsh
-apk add zsh zsh-theme-powerlevel10k
+apk add zsh zsh-theme-powerlevel13.2k
 mkdir -p ~/.local/share/zsh/plugins
-ln -s /usr/share/zsh/plugins/powerlevel10k ~/.local/share/zsh/plugins/
+ln -s /usr/share/zsh/plugins/powerlevel13.2k ~/.local/share/zsh/plugins/
 ```
 
 ### Fig
 
 Follow the instructions on
-[this page](https://fig.io/plugins/other/powerlevel10k).
+[this page](https://fig.io/plugins/other/powerlevel13.2k).
 
 ## Configuration
 
@@ -556,9 +556,9 @@ Follow the instructions on
 
 ### For new users
 
-On the first run, Powerlevel10k [configuration wizard](#configuration-wizard) will ask you a few
-questions and configure your prompt. If it doesn't trigger automatically, type `p10k configure`.
-Configuration wizard creates `~/.p10k.zsh` based on your preferences. Additional prompt
+On the first run, Powerlevel13.2k [configuration wizard](#configuration-wizard) will ask you a few
+questions and configure your prompt. If it doesn't trigger automatically, type `p13.2k configure`.
+Configuration wizard creates `~/.p13.2k.zsh` based on your preferences. Additional prompt
 customization can be done by editing this file. It has plenty of comments to help you navigate
 through configuration options.
 
@@ -586,7 +586,7 @@ through configuration options.
 
 ### For Powerlevel9k users
 
-If you've been using Powerlevel9k before, **do not remove the configuration options**. Powerlevel10k
+If you've been using Powerlevel9k before, **do not remove the configuration options**. Powerlevel13.2k
 will pick them up and provide you with the same prompt UI you are used to. See
 [Powerlevel9k compatibility](#powerlevel9k-compatibility).
 
@@ -594,38 +594,38 @@ will pick them up and provide you with the same prompt UI you are used to. See
 
 - [I'm using Powerlevel9k with Oh My Zsh. How do I migrate?](
     #im-using-powerlevel9k-with-oh-my-zsh-how-do-i-migrate)
-- [What is the relationship between Powerlevel9k and Powerlevel10k?](
-    #what-is-the-relationship-between-powerlevel9k-and-powerlevel10k)
-- [Does Powerlevel10k always render exactly the same prompt as Powerlevel9k given the same config?](
-    #does-powerlevel10k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
+- [What is the relationship between Powerlevel9k and Powerlevel13.2k?](
+    #what-is-the-relationship-between-powerlevel9k-and-powerlevel13.2k)
+- [Does Powerlevel13.2k always render exactly the same prompt as Powerlevel9k given the same config?](
+    #does-powerlevel13.2k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
 
 *Troubleshooting*: [Extra or missing spaces in prompt compared to Powerlevel9k](
   #extra-or-missing-spaces-in-prompt-compared-to-powerlevel9k).
 
 ## Fonts
 
-Powerlevel10k doesn't require custom fonts but can take advantage of them if they are available.
+Powerlevel13.2k doesn't require custom fonts but can take advantage of them if they are available.
 It works well with [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts),
 [Source Code Pro](https://github.com/adobe-fonts/source-code-pro),
 [Font Awesome](https://fontawesome.com/), [Powerline](https://github.com/powerline/fonts), and even
 the default system fonts. The full choice of style options is available only when using
 [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts).
 
-👇 **Recommended font**: Meslo Nerd Font patched for Powerlevel10k. 👇
+👇 **Recommended font**: Meslo Nerd Font patched for Powerlevel13.2k. 👇
 
-### <a name='recommended-meslo-nerd-font-patched-for-powerlevel10k'></a><a name='font'></a>Meslo Nerd Font patched for Powerlevel10k
+### <a name='recommended-meslo-nerd-font-patched-for-powerlevel13.2k'></a><a name='font'></a>Meslo Nerd Font patched for Powerlevel13.2k
 
 Gorgeous monospace font designed by Jim Lyles for Bitstream, customized by the same for Apple,
 further customized by André Berg, and finally patched by yours truly with customized scripts
 originally developed by Ryan L McIntyre of Nerd Fonts. Contains all glyphs and symbols that
-Powerlevel10k may need. Battle-tested in dozens of different terminals on all major operating
+Powerlevel13.2k may need. Battle-tested in dozens of different terminals on all major operating
 systems.
 
 *FAQ*: [How was the recommended font created?](#how-was-the-recommended-font-created)
 
 #### Automatic font installation
 
-If you are using iTerm2 or Termux, `p10k configure` can install the recommended font for you.
+If you are using iTerm2 or Termux, `p13.2k configure` can install the recommended font for you.
 Simply answer `Yes` when asked whether to install *Meslo Nerd Font*.
 
 If you are using a different terminal, proceed with manual font installation. 👇
@@ -634,17 +634,17 @@ If you are using a different terminal, proceed with manual font installation. �
 
 1. Download these four ttf files:
    - [MesloLGS NF Regular.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Regular.ttf)
    - [MesloLGS NF Bold.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Bold.ttf)
    - [MesloLGS NF Italic.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Italic.ttf)
    - [MesloLGS NF Bold Italic.ttf](
-       https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
+       https://github.com/romkatv/powerlevel13.2k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf)
 1. Double-click on each file and click "Install". This will make `MesloLGS NF` font available to all
    applications on your system.
 1. Configure your terminal to use this font:
-   - **iTerm2**: Type `p10k configure` and answer `Yes` when asked whether to install
+   - **iTerm2**: Type `p13.2k configure` and answer `Yes` when asked whether to install
      *Meslo Nerd Font*. Alternatively, open *iTerm2 → Preferences → Profiles → Text* and set *Font* to
      `MesloLGS NF`.
    - **Apple Terminal**: Open *Terminal → Preferences → Profiles → Text*, click *Change* under *Font*
@@ -655,9 +655,9 @@ If you are using a different terminal, proceed with manual font installation. �
      *Code → Preferences → Settings* (Mac), enter `terminal.integrated.fontFamily` in the search box at
      the top of *Settings* tab and set the value below to `MesloLGS NF`.
      Consult [this screenshot](
-       https://raw.githubusercontent.com/romkatv/powerlevel10k-media/389133fb8c9a2347929a23702ce3039aacc46c3d/visual-studio-code-font-settings.jpg)
+       https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/389133fb8c9a2347929a23702ce3039aacc46c3d/visual-studio-code-font-settings.jpg)
      to see how it should look like or see [this issue](
-       https://github.com/romkatv/powerlevel10k/issues/671) for extra information.
+       https://github.com/romkatv/powerlevel13.2k/issues/671) for extra information.
    - **GNOME Terminal** (the default Ubuntu terminal): Open *Terminal → Preferences* and click on the
      selected profile under *Profiles*. Check *Custom font* under *Text Appearance* and select
      `MesloLGS NF Regular`.
@@ -674,7 +674,7 @@ If you are using a different terminal, proceed with manual font installation. �
    - **IntelliJ** (and other IDEs by Jet Brains): Open *IDE → Edit → Preferences → Editor →
      Color Scheme → Console Font*. Select *Use console font instead of the default* and set the font
      name to `MesloLGS NF`.
-   - **Termux**: Type `p10k configure` and answer `Yes` when asked whether to install
+   - **Termux**: Type `p13.2k configure` and answer `Yes` when asked whether to install
      *Meslo Nerd Font*.
    - **Blink**: Type `config`, go to *Appearance*, tap *Add a new font*, tap *Open Gallery*, select
      *MesloLGS NF.css*, tap *import* and type `exit` in the home view to reload the font.
@@ -753,25 +753,25 @@ If you are using a different terminal, proceed with manual font installation. �
      ```css
      @font-face {
       font-family: "MesloLGS NF";
-      src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Regular.ttf");
+      src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Regular.ttf");
       font-weight: normal;
       font-style: normal;
      }
      @font-face {
          font-family: "MesloLGS NF";
-         src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Bold.ttf");
+         src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Bold.ttf");
          font-weight: bold;
          font-style: normal;
      }
      @font-face {
          font-family: "MesloLGS NF";
-         src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Italic.ttf");
+         src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Italic.ttf");
          font-weight: normal;
          font-style: italic;
      }
      @font-face {
          font-family: "MesloLGS NF";
-         src: url("https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Bold%20Italic.ttf");
+         src: url("https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20Bold%20Italic.ttf");
          font-weight: bold;
          font-style: italic;
      }
@@ -788,7 +788,7 @@ If you are using a different terminal, proceed with manual font installation. �
      ```text
      font-family = "MesloLGS NF"
      ```
-1. Run `p10k configure` to generate a new `~/.p10k.zsh`. The old config may work
+1. Run `p13.2k configure` to generate a new `~/.p13.2k.zsh`. The old config may work
    incorrectly with the new font.
 
 _Using a different terminal and know how to set the font for it? Share your knowledge by sending a
@@ -796,35 +796,35 @@ PR to expand the list!_
 
 ## Try it in Docker
 
-Try Powerlevel10k in Docker. You can safely make any changes to the file system while trying out
+Try Powerlevel13.2k in Docker. You can safely make any changes to the file system while trying out
 the theme. Once you exit Zsh, the container is deleted.
 
 ```zsh
 docker run -e TERM -e COLORTERM -e LC_ALL=C.UTF-8 -it --rm alpine sh -uec '
   apk add git zsh nano vim
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-  echo "source ~/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-  cd ~/powerlevel10k
+  git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git ~/powerlevel13.2k
+  echo "source ~/powerlevel13.2k/powerlevel13.2k.zsh-theme" >>~/.zshrc
+  cd ~/powerlevel13.2k
   exec zsh'
 ```
 
-*Tip*: Install [the recommended font](#meslo-nerd-font-patched-for-powerlevel10k) before
+*Tip*: Install [the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k) before
 running the Docker command to get access to all prompt styles.
 
-*Tip*: Run `p10k configure` while in Docker to try a different prompt style.
+*Tip*: Run `p13.2k configure` while in Docker to try a different prompt style.
 
 ## License
 
-Powerlevel10k is released under the
-[MIT license](https://github.com/romkatv/powerlevel10k/blob/master/LICENSE).
+Powerlevel13.2k is released under the
+[MIT license](https://github.com/romkatv/powerlevel13.2k/blob/master/LICENSE).
 
 ## FAQ
 
-- [How do I update Powerlevel10k?](#how-do-i-update-powerlevel10k)
-- [How do I uninstall Powerlevel10k?](#how-do-i-uninstall-powerlevel10k)
-- [How do I install Powerlevel10k on a machine without Internet access?](#how-do-i-install-powerlevel10k-on-a-machine-without-internet-access)
+- [How do I update Powerlevel13.2k?](#how-do-i-update-powerlevel13.2k)
+- [How do I uninstall Powerlevel13.2k?](#how-do-i-uninstall-powerlevel13.2k)
+- [How do I install Powerlevel13.2k on a machine without Internet access?](#how-do-i-install-powerlevel13.2k-on-a-machine-without-internet-access)
 - [Where can I ask for help and report bugs?](#where-can-i-ask-for-help-and-report-bugs)
-- [Which aspects of shell and terminal does Powerlevel10k affect?](#which-aspects-of-shell-and-terminal-does-powerlevel10k-affect)
+- [Which aspects of shell and terminal does Powerlevel13.2k affect?](#which-aspects-of-shell-and-terminal-does-powerlevel13.2k-affect)
 - [I'm using Powerlevel9k with Oh My Zsh. How do I migrate?](#im-using-powerlevel9k-with-oh-my-zsh-how-do-i-migrate)
 - [Is it really fast?](#is-it-really-fast)
 - [How do I configure instant prompt?](#how-do-i-configure-instant-prompt)
@@ -837,27 +837,27 @@ Powerlevel10k is released under the
 - [How do I add username and/or hostname to prompt?](#how-do-i-add-username-andor-hostname-to-prompt)
 - [Why some prompt segments appear and disappear as I'm typing?](#why-some-prompt-segments-appear-and-disappear-as-im-typing)
 - [How do I change prompt colors?](#how-do-i-change-prompt-colors)
-- [Why does Powerlevel10k spawn extra processes?](#why-does-powerlevel10k-spawn-extra-processes)
-- [Are there configuration options that make Powerlevel10k slow?](#are-there-configuration-options-that-make-powerlevel10k-slow)
-- [Is Powerlevel10k fast to load?](#is-powerlevel10k-fast-to-load)
-- [What is the relationship between Powerlevel9k and Powerlevel10k?](#what-is-the-relationship-between-powerlevel9k-and-powerlevel10k)
-- [Does Powerlevel10k always render exactly the same prompt as Powerlevel9k given the same config?](#does-powerlevel10k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
+- [Why does Powerlevel13.2k spawn extra processes?](#why-does-powerlevel13.2k-spawn-extra-processes)
+- [Are there configuration options that make Powerlevel13.2k slow?](#are-there-configuration-options-that-make-powerlevel13.2k-slow)
+- [Is Powerlevel13.2k fast to load?](#is-powerlevel13.2k-fast-to-load)
+- [What is the relationship between Powerlevel9k and Powerlevel13.2k?](#what-is-the-relationship-between-powerlevel9k-and-powerlevel13.2k)
+- [Does Powerlevel13.2k always render exactly the same prompt as Powerlevel9k given the same config?](#does-powerlevel13.2k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
 - [What is the best prompt style in the configuration wizard?](#what-is-the-best-prompt-style-in-the-configuration-wizard)
-- [How to make Powerlevel10k look like robbyrussell Oh My Zsh theme?](#how-to-make-powerlevel10k-look-like-robbyrussell-oh-my-zsh-theme)
+- [How to make Powerlevel13.2k look like robbyrussell Oh My Zsh theme?](#how-to-make-powerlevel13.2k-look-like-robbyrussell-oh-my-zsh-theme)
 - [Can prompts for completed commands display error status for *those* commands instead of the commands preceding them?](#can-prompts-for-completed-commands-display-error-status-for-those-commands-instead-of-the-commands-preceding-them)
 - [What is the minimum supported Zsh version?](#what-is-the-minimum-supported-zsh-version)
 - [How were these screenshots and animated gifs created?](#how-were-these-screenshots-and-animated-gifs-created)
 - [How was the recommended font created?](#how-was-the-recommended-font-created)
-- [How to package Powerlevel10k for distribution?](#how-to-package-powerlevel10k-for-distribution)
+- [How to package Powerlevel13.2k for distribution?](#how-to-package-powerlevel13.2k-for-distribution)
 
-### How do I update Powerlevel10k?
+### How do I update Powerlevel13.2k?
 
-The command to update Powerlevel10k depends on how it was installed.
+The command to update Powerlevel13.2k depends on how it was installed.
 
 | Installation                  | Update command                                              |
 |-------------------------------|-------------------------------------------------------------|
-| [Manual](#manual)             | `git -C ~/powerlevel10k pull`                               |
-| [Oh My Zsh](#oh-my-zsh)       | `git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull` |
+| [Manual](#manual)             | `git -C ~/powerlevel13.2k pull`                               |
+| [Oh My Zsh](#oh-my-zsh)       | `git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel13.2k pull` |
 | [Prezto](#prezto)             | `zprezto-update`                                            |
 | [Zim](#zim)                   | `zimfw update`                                              |
 | [Antigen](#antigen)           | `antigen update`                                            |
@@ -869,69 +869,69 @@ The command to update Powerlevel10k depends on how it was installed.
 | [Zi](#zi)                     | `zi update`                                                 |
 | [Zap](#zap)                   | `zap update`                                              |
 | [Homebrew](#homebrew)         | `brew update && brew upgrade`                               |
-| [Arch Linux](#arch-linux)     | `yay -S --noconfirm zsh-theme-powerlevel10k-git`            |
+| [Arch Linux](#arch-linux)     | `yay -S --noconfirm zsh-theme-powerlevel13.2k-git`            |
 | [Alpine Linux](#alpine-linux) | `apk update && apk upgrade`                                 |
 
-**IMPORTANT**: Restart Zsh after updating Powerlevel10k. [Do not use `source ~/.zshrc`](
+**IMPORTANT**: Restart Zsh after updating Powerlevel13.2k. [Do not use `source ~/.zshrc`](
   #weird-things-happen-after-typing-source-zshrc).
 
-### How do I uninstall Powerlevel10k?
+### How do I uninstall Powerlevel13.2k?
 
-1. Remove all references to "p10k" from `~/.zshrc`. You might have this snippet at the top:
+1. Remove all references to "p13.2k" from `~/.zshrc`. You might have this snippet at the top:
    ```zsh
-   if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+   if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh" ]]; then
+     source "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh"
    fi
    ```
    And this at the bottom:
    ```zsh
-   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+   [[ ! -f ~/.p13.2k.zsh ]] || source ~/.p13.2k.zsh
    ```
    These are added by the [configuration wizard](#configuration-wizard). Remove them.
-2. Remove all references to "powerlevel10k" from `~/.zshrc`, `~/.zpreztorc` and `~/.zimrc` (some
+2. Remove all references to "powerlevel13.2k" from `~/.zshrc`, `~/.zpreztorc` and `~/.zimrc` (some
    of these files may be missing -- this is normal). These references have been added manually by
-   yourself when installing Powerlevel10k. Refer to the [installation instructions](#installation)
+   yourself when installing Powerlevel13.2k. Refer to the [installation instructions](#installation)
    if you need a reminder.
-3. Verify that all references to "p10k" and "powerlevel10k" are gone from `~/.zshrc`, `~/.zpreztorc`
+3. Verify that all references to "p13.2k" and "powerlevel13.2k" are gone from `~/.zshrc`, `~/.zpreztorc`
    and `~/.zimrc`.
    ```zsh
-   grep -E 'p10k|powerlevel10k' ~/.zshrc ~/.zpreztorc ~/.zimrc 2>/dev/null
+   grep -E 'p13.2k|powerlevel13.2k' ~/.zshrc ~/.zpreztorc ~/.zimrc 2>/dev/null
    ```
-   If this command produces output, there are still references to "p10k" or "powerlevel10k". You
+   If this command produces output, there are still references to "p13.2k" or "powerlevel13.2k". You
    need to remove them.
-4. Delete Powerlevel10k configuration file. This file is created by the
+4. Delete Powerlevel13.2k configuration file. This file is created by the
    [configuration wizard](#configuration-wizard) and may contain manual edits by yourself.
    ```zsh
-   rm -f ~/.p10k.zsh
+   rm -f ~/.p13.2k.zsh
    ```
-5. Delete Powerlevel10k source files. These files have been downloaded when you've installed
-   Powerlevel10k. The command to delete them depends on which installation method you'd chosen.
+5. Delete Powerlevel13.2k source files. These files have been downloaded when you've installed
+   Powerlevel13.2k. The command to delete them depends on which installation method you'd chosen.
    Refer to the [installation instructions](#installation) if you need a reminder.
 
    | Installation                  | Uninstall command                                                |
    |-------------------------------|------------------------------------------------------------------|
-   | [Manual](#manual)             | `rm -rf ~/powerlevel10k`                                         |
-   | [Oh My Zsh](#oh-my-zsh)       | `rm -rf -- ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k` |
+   | [Manual](#manual)             | `rm -rf ~/powerlevel13.2k`                                         |
+   | [Oh My Zsh](#oh-my-zsh)       | `rm -rf -- ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel13.2k` |
    | [Prezto](#prezto)             | n/a                                                              |
    | [Zim](#zim)                   | `zimfw uninstall`                                                |
-   | [Antigen](#antigen)           | `antigen purge romkatv/powerlevel10k`                            |
-   | [Antidote](#antidote)         | `antidote purge romkatv/powerlevel10k`                           |
+   | [Antigen](#antigen)           | `antigen purge romkatv/powerlevel13.2k`                            |
+   | [Antidote](#antidote)         | `antidote purge romkatv/powerlevel13.2k`                           |
    | [Zplug](#zplug)               | `zplug clean`                                                    |
    | [Zgen](#zgen)                 | `zgen reset`                                                     |
-   | [Zplugin](#zplugin)           | `zplugin delete romkatv/powerlevel10k`                           |
-   | [Zinit](#zinit)               | `zinit delete romkatv/powerlevel10k`                             |
-   | [Zi](#zi)                     | `zi delete romkatv/powerlevel10k`                                |
+   | [Zplugin](#zplugin)           | `zplugin delete romkatv/powerlevel13.2k`                           |
+   | [Zinit](#zinit)               | `zinit delete romkatv/powerlevel13.2k`                             |
+   | [Zi](#zi)                     | `zi delete romkatv/powerlevel13.2k`                                |
    | [Zap](#zap)                   | `zsh -ic 'zap clean'`                                            |
-   | [Homebrew](#homebrew)         | `brew uninstall powerlevel10k`                                   |
-   | [Arch Linux](#arch-linux)     | `yay -R --noconfirm zsh-theme-powerlevel10k-git`                 |
-   | [Alpine Linux](#alpine-linux) | `apk del zsh-theme-powerlevel10k`                                |
+   | [Homebrew](#homebrew)         | `brew uninstall powerlevel13.2k`                                   |
+   | [Arch Linux](#arch-linux)     | `yay -R --noconfirm zsh-theme-powerlevel13.2k-git`                 |
+   | [Alpine Linux](#alpine-linux) | `apk del zsh-theme-powerlevel13.2k`                                |
 6. Restart Zsh. [Do not use `source ~/.zshrc`](#weird-things-happen-after-typing-source-zshrc).
-7. Delete Powerlevel10k cache files.
+7. Delete Powerlevel13.2k cache files.
    ```zsh
-   rm -rf -- "${XDG_CACHE_HOME:-$HOME/.cache}"/p10k-*(N) "${XDG_CACHE_HOME:-$HOME/.cache}"/gitstatus
+   rm -rf -- "${XDG_CACHE_HOME:-$HOME/.cache}"/p13.2k-*(N) "${XDG_CACHE_HOME:-$HOME/.cache}"/gitstatus
    ```
 
-### How do I install Powerlevel10k on a machine without Internet access?
+### How do I install Powerlevel13.2k on a machine without Internet access?
 
 1. Run this command on the machine without Internet access:
    ```sh
@@ -941,30 +941,30 @@ The command to update Powerlevel10k depends on how it was installed.
    `target_uname` with the output of the previous command:
    ```sh
    target_uname="replace this with the output of the previous command"
-   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-   GITSTATUS_CACHE_DIR="$HOME"/powerlevel10k/gitstatus/usrbin ~/powerlevel10k/gitstatus/install -f -s "${target_uname% *}" -m "${target_uname#* }"
+   git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git ~/powerlevel13.2k
+   GITSTATUS_CACHE_DIR="$HOME"/powerlevel13.2k/gitstatus/usrbin ~/powerlevel13.2k/gitstatus/install -f -s "${target_uname% *}" -m "${target_uname#* }"
    ```
-3. Copy `~/powerlevel10k` from the machine connected to the Internet to the one without Internet
+3. Copy `~/powerlevel13.2k` from the machine connected to the Internet to the one without Internet
    access.
-4. Add `source ~/powerlevel10k/powerlevel10k.zsh-theme` to `~/.zshrc` on the machine without
+4. Add `source ~/powerlevel13.2k/powerlevel13.2k.zsh-theme` to `~/.zshrc` on the machine without
    Internet access:
    ```zsh
-   echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+   echo 'source ~/powerlevel13.2k/powerlevel13.2k.zsh-theme' >>~/.zshrc
    ```
 5. If `~/.zshrc` on the machine without Internet access sets `ZSH_THEME`, remove that line.
    ```zsh
    sed -i.bak '/^ZSH_THEME=/d' ~/.zshrc
    ```
 
-To update, remove `~/powerlevel10k` on both machines and repeat steps 1-3.
+To update, remove `~/powerlevel13.2k` on both machines and repeat steps 1-3.
 
 ### Where can I ask for help and report bugs?
 
 The best way to ask for help and to report bugs is to [open an issue](
-  https://github.com/romkatv/powerlevel10k/issues).
+  https://github.com/romkatv/powerlevel13.2k/issues).
 
 [Gitter](
-  https://gitter.im/powerlevel10k/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+  https://gitter.im/powerlevel13.2k/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 is another option.
 
 If all else fails, email roman.perepelitsa@gmail.com.
@@ -972,18 +972,18 @@ If all else fails, email roman.perepelitsa@gmail.com.
 If necessary, encrypt your communication with [this PGP key](
   https://api.github.com/users/romkatv/gpg_keys).
 
-### Which aspects of shell and terminal does Powerlevel10k affect?
+### Which aspects of shell and terminal does Powerlevel13.2k affect?
 
-Powerlevel10k defines prompt and nothing else. It sets [prompt-related options](
+Powerlevel13.2k defines prompt and nothing else. It sets [prompt-related options](
   http://zsh.sourceforge.net/Doc/Release/Options.html#Prompting), and parameters `PS1` and `RPS1`.
 
 ![Prompt Highlight](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-highlight.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/prompt-highlight.png)
 
-Everything within the highlighted areas on the screenshot is produced by Powerlevel10k.
-Powerlevel10k has no control over the terminal content or colors outside these areas.
+Everything within the highlighted areas on the screenshot is produced by Powerlevel13.2k.
+Powerlevel13.2k has no control over the terminal content or colors outside these areas.
 
-Powerlevel10k does not affect:
+Powerlevel13.2k does not affect:
 
 - Terminal window/tab title.
 - Colors used by `ls`.
@@ -995,28 +995,28 @@ Powerlevel10k does not affect:
 - Prompt parameters other than `PS1` and `RPS1`.
 - Zsh options other than those [related to prompt](
     http://zsh.sourceforge.net/Doc/Release/Options.html#Prompting).
-- The set of available commands. Powerlevel10k does not install any new commands
-  with the only exception of `p10k`.
+- The set of available commands. Powerlevel13.2k does not install any new commands
+  with the only exception of `p13.2k`.
 
 ### I'm using Powerlevel9k with Oh My Zsh. How do I migrate?
 
 1. Run this command:
 ```zsh
-# Add powerlevel10k to the list of Oh My Zsh themes.
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-# Replace ZSH_THEME="powerlevel9k/powerlevel9k" with ZSH_THEME="powerlevel10k/powerlevel10k".
-sed -i.bak 's/powerlevel9k/powerlevel10k/g' ~/.zshrc
+# Add powerlevel13.2k to the list of Oh My Zsh themes.
+git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git $ZSH_CUSTOM/themes/powerlevel13.2k
+# Replace ZSH_THEME="powerlevel9k/powerlevel9k" with ZSH_THEME="powerlevel13.2k/powerlevel13.2k".
+sed -i.bak 's/powerlevel9k/powerlevel13.2k/g' ~/.zshrc
 # Restart Zsh.
 exec zsh
 ```
 2. *Optional but highly recommended:*
-   1. Install [the recommended font](#meslo-nerd-font-patched-for-powerlevel10k).
-   1. Type `p10k configure` and choose your favorite prompt style.
+   1. Install [the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k).
+   1. Type `p13.2k configure` and choose your favorite prompt style.
 
 *Related:*
   - [Powerlevel9k compatibility.](#powerlevel9k-compatibility)
-  - [Does Powerlevel10k always render exactly the same prompt as Powerlevel9k given the same config?](
-      #does-powerlevel10k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
+  - [Does Powerlevel13.2k always render exactly the same prompt as Powerlevel9k given the same config?](
+      #does-powerlevel13.2k-always-render-exactly-the-same-prompt-as-powerlevel9k-given-the-same-config)
   - [Extra or missing spaces in prompt compared to Powerlevel9k.](
       #extra-or-missing-spaces-in-prompt-compared-to-powerlevel9k)
   - [Configuration wizard.](#configuration-wizard)
@@ -1032,15 +1032,15 @@ Yes. See [zsh-bench](https://github.com/romkatv/zsh-bench) or a direct compariso
 See [instant prompt](#instant-prompt) to learn about instant prompt. This section explains how you
 can enable and configure it and lists caveats that you should be aware of.
 
-Instant prompt can be enabled either through `p10k configure` or by manually adding the following
+Instant prompt can be enabled either through `p13.2k configure` or by manually adding the following
 code snippet at the top of `~/.zshrc`:
 
 ```zsh
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel13.2k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh"
 fi
 ```
 
@@ -1063,8 +1063,8 @@ the output, or move it above the instant prompt preamble.
 Here's an example of `~/.zshrc` that breaks when instant prompt is enabled:
 
 ```zsh
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 keychain id_rsa --agents ssh  # asks for password
@@ -1078,8 +1078,8 @@ Fixed version:
 keychain id_rsa --agents ssh  # moved before instant prompt
 
 # OK to perform console I/O before this point.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh"
 fi
 # From this point on, until zsh is fully initialized, console input won't work and
 # console output may appear uncolored.
@@ -1088,7 +1088,7 @@ chatty-script >/dev/null      # spam output suppressed
 # ...
 ```
 
-If `POWERLEVEL9K_INSTANT_PROMPT` is unset or set to `verbose`, Powerlevel10k will print a warning
+If `POWERLEVEL9K_INSTANT_PROMPT` is unset or set to `verbose`, Powerlevel13.2k will print a warning
 when it detects console output during initialization to bring attention to potential issues. You can
 silence this warning (without suppressing console output) with `POWERLEVEL9K_INSTANT_PROMPT=quiet`.
 This is recommended if some initialization code in `~/.zshrc` prints to console and it's infeasible
@@ -1096,9 +1096,9 @@ to move it above the instant prompt preamble or to suppress its output. You can 
 instant prompt with `POWERLEVEL9K_INSTANT_PROMPT=off`. Do this if instant prompt breaks Zsh
 initialization and you don't know how to fix it.
 
-The value of `POWERLEVEL9K_INSTANT_PROMPT` can be changed by running `p10k configure` and selecting
+The value of `POWERLEVEL9K_INSTANT_PROMPT` can be changed by running `p13.2k configure` and selecting
 the appropriate option on the *Instant Prompt* screen. Alternatively, you can search for
-`POWERLEVEL9K_INSTANT_PROMPT` in the existing `~/.p10k.zsh` and change its value there.
+`POWERLEVEL9K_INSTANT_PROMPT` in the existing `~/.p13.2k.zsh` and change its value there.
 
 *Note*: Instant prompt requires Zsh >= 5.4. It's OK to enable it even when using an older version of
 Zsh but it won't do anything.
@@ -1116,8 +1116,8 @@ If you've enabled [instant prompt](#instant-prompt), you should have these lines
 `~/.zshrc`:
 
 ```zsh
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh"
 fi
 ```
 
@@ -1126,8 +1126,8 @@ To initialize direnv you need to add one line above that block and one line belo
 ```zsh
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p13.2k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 (( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
@@ -1145,7 +1145,7 @@ export GPG_TTY=$TTY
 ```
 
 This works whether you are using [instant prompt](#instant-prompt) or not. It works even if you
-aren't using powerlevel10k. As an extra bonus, it's much faster than the commonly used
+aren't using powerlevel13.2k. As an extra bonus, it's much faster than the commonly used
 `export GPG_TTY=$(tty)`.
 
 *Related*: [How do I initialize direnv when using instant prompt?](
@@ -1181,7 +1181,7 @@ feature:master wip ⇣42⇡42 ⇠42⇢42 *42 merge ~42 +42 !42 ?42
 
 ### How do I change the format of Git status?
 
-To change the format of Git status, open `~/.p10k.zsh`, search for `my_git_formatter` and edit its
+To change the format of Git status, open `~/.p13.2k.zsh`, search for `my_git_formatter` and edit its
 source code.
 
 *Related*: [What do different symbols in Git status mean?](
@@ -1189,7 +1189,7 @@ source code.
 
 ### Why is Git status from `$HOME/.git` not displayed in prompt?
 
-When using Lean, Classic or Rainbow style, `~/.p10k.zsh` contains the following parameter:
+When using Lean, Classic or Rainbow style, `~/.p13.2k.zsh` contains the following parameter:
 
 ```zsh
 # Don't show Git status in prompt for repositories whose workdir matches this pattern.
@@ -1198,33 +1198,33 @@ When using Lean, Classic or Rainbow style, `~/.p10k.zsh` contains the following 
 typeset -g POWERLEVEL9K_VCS_DISABLED_WORKDIR_PATTERN='~'
 ```
 
-To see Git status for `$HOME/.git` in prompt, open `~/.p10k.zsh` and remove
+To see Git status for `$HOME/.git` in prompt, open `~/.p13.2k.zsh` and remove
 `POWERLEVEL9K_VCS_DISABLED_WORKDIR_PATTERN`.
 
 ### Why does Git status sometimes appear grey and then gets colored after a short period of time?
 
-tl;dr: When Git status in prompt is greyed out, it means Powerlevel10k is currently computing
+tl;dr: When Git status in prompt is greyed out, it means Powerlevel13.2k is currently computing
 up-to-date Git status in the background. Prompt will get automatically refreshed when this
 computation completes.
 
-When your current directory is within a Git repository, Powerlevel10k computes up-to-date Git
+When your current directory is within a Git repository, Powerlevel13.2k computes up-to-date Git
 status after every command. If the repository is large, or the machine is slow, this computation
 can take quite a bit of time. If it takes longer than 10 milliseconds (configurable via
-`POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS`), Powerlevel10k displays the last known Git status in
+`POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS`), Powerlevel13.2k displays the last known Git status in
 grey and continues to compute up-to-date Git status in the background. When the computation
-completes, Powerlevel10k refreshes prompt with new information, this time with colored Git status.
+completes, Powerlevel13.2k refreshes prompt with new information, this time with colored Git status.
 
 When using *Rainbow* style, Git status is displayed as black on grey while it's still being
 computed. Depending on the terminal color palette, this may be difficult to read. In this case you
 might want to change the background color to something lighter for more contrast. To do that, open
-`~/.p10k.zsh`, search for `POWERLEVEL9K_VCS_LOADING_BACKGROUND`, uncomment it if it's commented out,
+`~/.p13.2k.zsh`, search for `POWERLEVEL9K_VCS_LOADING_BACKGROUND`, uncomment it if it's commented out,
 and change the value.
 
 ```zsh
 typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=244
 ```
 
-Type `source ~/.p10k.zsh` to apply your changes to the current Zsh session.
+Type `source ~/.p13.2k.zsh` to apply your changes to the current Zsh session.
 
 *Related*: [How do I change prompt colors?](#how-do-i-change-prompt-colors)
 
@@ -1235,7 +1235,7 @@ as root or via SSH. There is little value in showing `username` or `hostname` wh
 to your local machine as a normal user. So the absence of `username@hostname` in your prompt is an
 indication that you are working locally and that you aren't root. You can change it, however.
 
-Open `~/.p10k.zsh`. Close to the top you can see the most important parameters that define which
+Open `~/.p13.2k.zsh`. Close to the top you can see the most important parameters that define which
 segments are shown in your prompt. All generally useful prompt segments are listed in there. Some of
 them are enabled, others are commented out. One of them is of interest to you.
 
@@ -1274,8 +1274,8 @@ a relevant tool.
 typeset -g POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens'
 ```
 
-Configs created by `p10k configure` may contain parameters of this kind. To customize when different
-prompt segments are shown, open `~/.p10k.zsh`, search for `SHOW_ON_COMMAND` and either remove these
+Configs created by `p13.2k configure` may contain parameters of this kind. To customize when different
+prompt segments are shown, open `~/.p13.2k.zsh`, search for `SHOW_ON_COMMAND` and either remove these
 parameters or change their values.
 
 You can also define a function in `~/.zshrc` to toggle the display of a prompt segment between
@@ -1289,7 +1289,7 @@ function kube-toggle() {
   else
     POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens'
   fi
-  p10k reload
+  p13.2k reload
   if zle; then
     zle push-input
     zle accept-line
@@ -1302,15 +1302,15 @@ to `~/.zshrc`:
 
 ```zsh
 zle -N kube-toggle
-bindkey '^]' kube-toggle  # ctrl-] to toggle kubecontext in powerlevel10k prompt
+bindkey '^]' kube-toggle  # ctrl-] to toggle kubecontext in powerlevel13.2k prompt
 ```
 
 ### How do I change prompt colors?
 
 You can either [change the color palette used by your terminal](
   #change-the-color-palette-used-by-your-terminal) or
-[set colors through Powerlevel10k configuration parameters](
-  #set-colors-through-Powerlevel10k-configuration-parameters).
+[set colors through Powerlevel13.2k configuration parameters](
+  #set-colors-through-Powerlevel13.2k-configuration-parameters).
 
 #### Change the color palette used by your terminal
 
@@ -1319,14 +1319,14 @@ kind of terminal you are using. Look around in terminal's settings/preferences o
 documentation.
 
 When you change the terminal color palette, it usually affects only the first 16 colors, numbered
-from 0 to 15. In order to see any effect on Powerlevel10k prompt, you need to use prompt style that
-utilizes these low-numbered colors. Type `p10k configure` and select *Rainbow*, *Lean* → *8 colors*
+from 0 to 15. In order to see any effect on Powerlevel13.2k prompt, you need to use prompt style that
+utilizes these low-numbered colors. Type `p13.2k configure` and select *Rainbow*, *Lean* → *8 colors*
 or *Pure* → *Original*. Other styles use higher-numbered colors, so they look the same in any
 terminal color palette.
 
-#### Set colors through Powerlevel10k configuration parameters
+#### Set colors through Powerlevel13.2k configuration parameters
 
-Open `~/.p10k.zsh`, search for "color", "foreground" and "background" and change values of
+Open `~/.p13.2k.zsh`, search for "color", "foreground" and "background" and change values of
 appropriate parameters. For example, here's how you can set the foreground of `time` prompt segment
 to bright red:
 
@@ -1338,7 +1338,7 @@ Colors are specified using numbers from 0 to 255. Colors from 0 to 15 look diffe
 terminals. Many terminals also support customization of these colors through color palettes
 (a.k.a. color schemes, or themes). Colors from 16 to 255 always look the same.
 
-Type `source ~/.p10k.zsh` to apply your changes to the current Zsh session.
+Type `source ~/.p13.2k.zsh` to apply your changes to the current Zsh session.
 
 To see how different numbered colors look in your terminal, run the following command:
 
@@ -1363,73 +1363,73 @@ different color. This behavior can be
 [turned off](https://code.visualstudio.com/docs/terminal/appearance#_minimum-contrast-ratio) in
 VSCode settings.
 
-### Why does Powerlevel10k spawn extra processes?
+### Why does Powerlevel13.2k spawn extra processes?
 
-Powerlevel10k uses [gitstatus](https://github.com/romkatv/gitstatus) as the backend behind `vcs`
+Powerlevel13.2k uses [gitstatus](https://github.com/romkatv/gitstatus) as the backend behind `vcs`
 prompt; gitstatus spawns `gitstatusd` and `zsh`. See
-[gitstatus](https://github.com/romkatv/gitstatus) for details. Powerlevel10k may also spawn `zsh`
+[gitstatus](https://github.com/romkatv/gitstatus) for details. Powerlevel13.2k may also spawn `zsh`
 to perform computation without blocking prompt. To avoid security hazard, these background processes
 aren't shared by different interactive shells. They terminate automatically when the parent `zsh`
 process terminates or runs `exec(3)`.
 
-### Are there configuration options that make Powerlevel10k slow?
+### Are there configuration options that make Powerlevel13.2k slow?
 
-No, Powerlevel10k is always fast, with any configuration you throw at it. If you have noticeable
-prompt latency when using Powerlevel10k, please
-[open an issue](https://github.com/romkatv/powerlevel10k/issues).
+No, Powerlevel13.2k is always fast, with any configuration you throw at it. If you have noticeable
+prompt latency when using Powerlevel13.2k, please
+[open an issue](https://github.com/romkatv/powerlevel13.2k/issues).
 
-### Is Powerlevel10k fast to load?
+### Is Powerlevel13.2k fast to load?
 
 Yes. See [zsh-bench](https://github.com/romkatv/zsh-bench).
 
-### What is the relationship between Powerlevel9k and Powerlevel10k?
+### What is the relationship between Powerlevel9k and Powerlevel13.2k?
 
-Powerlevel10k was forked from Powerlevel9k in March 2019 after a week-long discussion in
+Powerlevel13.2k was forked from Powerlevel9k in March 2019 after a week-long discussion in
 [powerlevel9k#1170](https://github.com/Powerlevel9k/powerlevel9k/issues/1170). Powerlevel9k was
-already a mature project with a large user base and a release cycle measured in months. Powerlevel10k
+already a mature project with a large user base and a release cycle measured in months. Powerlevel13.2k
 was spun off to iterate on performance improvements and new features at much higher pace.
 
-Powerlevel9k and Powerlevel10k are independent projects. When using one, you shouldn't install the
+Powerlevel9k and Powerlevel13.2k are independent projects. When using one, you shouldn't install the
 other. Issues should be filed against the project that you actually use. There are no individuals
 that have commit rights in both repositories. All bug fixes and new features committed to
-Powerlevel9k repository get ported to Powerlevel10k.
+Powerlevel9k repository get ported to Powerlevel13.2k.
 
-Over time, virtually all code in Powerlevel10k has been rewritten. There is currently no meaningful
-overlap between the implementations of Powerlevel9k and Powerlevel10k.
+Over time, virtually all code in Powerlevel13.2k has been rewritten. There is currently no meaningful
+overlap between the implementations of Powerlevel9k and Powerlevel13.2k.
 
-Powerlevel10k is committed to maintaining backward compatibility with all configs indefinitely. This
+Powerlevel13.2k is committed to maintaining backward compatibility with all configs indefinitely. This
 commitment covers all configuration parameters recognized by Powerlevel9k (see
 [Powerlevel9k compatibility](#powerlevel9k-compatibility)) and additional parameters that only
-Powerlevel10k understands. Names of all parameters in Powerlevel10k start with `POWERLEVEL9K_` for
+Powerlevel13.2k understands. Names of all parameters in Powerlevel13.2k start with `POWERLEVEL9K_` for
 consistency.
 
-### Does Powerlevel10k always render exactly the same prompt as Powerlevel9k given the same config?
+### Does Powerlevel13.2k always render exactly the same prompt as Powerlevel9k given the same config?
 
 Almost. There are a few differences.
 
-- By default only `git` vcs backend is enabled in Powerlevel10k. If you need `svn` and `hg`, add
-  them to `POWERLEVEL9K_VCS_BACKENDS`. These backends aren't yet optimized in Powerlevel10k, so
+- By default only `git` vcs backend is enabled in Powerlevel13.2k. If you need `svn` and `hg`, add
+  them to `POWERLEVEL9K_VCS_BACKENDS`. These backends aren't yet optimized in Powerlevel13.2k, so
   enabling them will make prompt *very slow*.
-- Powerlevel10k doesn't support `POWERLEVEL9K_VCS_SHOW_SUBMODULE_DIRTY=true`.
-- Powerlevel10k strives to be bug-compatible with Powerlevel9k but not when it comes to egregious
+- Powerlevel13.2k doesn't support `POWERLEVEL9K_VCS_SHOW_SUBMODULE_DIRTY=true`.
+- Powerlevel13.2k strives to be bug-compatible with Powerlevel9k but not when it comes to egregious
   bugs. If you accidentally rely on these bugs, your prompt will differ between Powerlevel9k and
-  Powerlevel10k. Some examples:
-  - Powerlevel9k ignores some options that are set after the theme is sourced while Powerlevel10k
-    respects all options. If you see different icons in Powerlevel9k and Powerlevel10k, you've
+  Powerlevel13.2k. Some examples:
+  - Powerlevel9k ignores some options that are set after the theme is sourced while Powerlevel13.2k
+    respects all options. If you see different icons in Powerlevel9k and Powerlevel13.2k, you've
     probably defined `POWERLEVEL9K_MODE` before sourcing the theme. This parameter gets ignored
-    by Powerlevel9k but honored by Powerlevel10k. If you want your prompt to look in Powerlevel10k
+    by Powerlevel9k but honored by Powerlevel13.2k. If you want your prompt to look in Powerlevel13.2k
     the same as in Powerlevel9k, remove `POWERLEVEL9K_MODE`.
-  - Powerlevel9k doesn't respect `ZLE_RPROMPT_INDENT`. As a result, right prompt in Powerlevel10k
+  - Powerlevel9k doesn't respect `ZLE_RPROMPT_INDENT`. As a result, right prompt in Powerlevel13.2k
     can have an extra space at the end compared to Powerlevel9k. Set `ZLE_RPROMPT_INDENT=0` if you
     don't want that space. More details in
     [troubleshooting](#extra-space-without-background-on-the-right-side-of-right-prompt).
-  - Powerlevel9k has inconsistent spacing around icons. This was fixed in Powerlevel10k. Set
+  - Powerlevel9k has inconsistent spacing around icons. This was fixed in Powerlevel13.2k. Set
     `POWERLEVEL9K_LEGACY_ICON_SPACING=true` to get the same spacing as in Powerlevel9k.  More
     details in [troubleshooting](#extra-or-missing-spaces-around-icons).
-  - There are dozens more bugs in Powerlevel9k that don't exist in Powerlevel10k.
+  - There are dozens more bugs in Powerlevel9k that don't exist in Powerlevel13.2k.
 
 If you notice any other changes in prompt appearance when switching from Powerlevel9k to
-Powerlevel10k, please [open an issue](https://github.com/romkatv/powerlevel10k/issues).
+Powerlevel13.2k, please [open an issue](https://github.com/romkatv/powerlevel13.2k/issues).
 
 ### What is the best prompt style in the configuration wizard?
 
@@ -1462,23 +1462,23 @@ without left frame.
 
 If you value horizontal space or prefer minimalist aesthetics:
 
-- Use a monospace font, such as [the recommended font](#meslo-nerd-font-patched-for-powerlevel10k).
+- Use a monospace font, such as [the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k).
   Non-monospace fonts require extra space after icons that are larger than a single column.
 - Use Lean style. Compared to Classic and Rainbow, it saves two characters per prompt segment.
 - Disable *current time* and *frame*.
 - Use *few icons*. The extra icons enabled by the *many icons* option primarily serve decorative
   function. Informative icons, such as background job indicator, will be shown either way.
 
-*Note*: You can run configuration wizard as many times as you like. Type `p10k configure` to try new
+*Note*: You can run configuration wizard as many times as you like. Type `p13.2k configure` to try new
 prompt style.
 
-### How to make Powerlevel10k look like robbyrussell Oh My Zsh theme?
+### How to make Powerlevel13.2k look like robbyrussell Oh My Zsh theme?
 
 Use [this config](
-  https://github.com/romkatv/powerlevel10k/blob/master/config/p10k-robbyrussell.zsh).
+  https://github.com/romkatv/powerlevel13.2k/blob/master/config/p13.2k-robbyrussell.zsh).
 
-You can either download it, save as `~/.p10k.zsh` and `source ~/.p10k.zsh` from `~/.zshrc`, or
-source `p10k-robbyrussell.zsh` directly from your cloned `powerlevel10k` repository.
+You can either download it, save as `~/.p13.2k.zsh` and `source ~/.p13.2k.zsh` from `~/.zshrc`, or
+source `p13.2k-robbyrussell.zsh` directly from your cloned `powerlevel13.2k` repository.
 
 ### Can prompts for completed commands display error status for *those* commands instead of the commands preceding them?
 
@@ -1488,7 +1488,7 @@ it's no longer possible to update prompt for *that* command. This is why the err
 command is reflected in the *next* prompt.
 
 For details, see [this post on /r/zsh](
-https://www.reddit.com/r/zsh/comments/eg49ff/powerlevel10k_prompt_history_exit_code_colors/fc5huku).
+https://www.reddit.com/r/zsh/comments/eg49ff/powerlevel13.2k_prompt_history_exit_code_colors/fc5huku).
 
 ### What is the minimum supported Zsh version?
 
@@ -1497,23 +1497,23 @@ Zsh 5.3 or newer should work. Fast startup requires Zsh >= 5.4.
 ### How were these screenshots and animated gifs created?
 
 All screenshots and animated gifs were recorded in GNOME Terminal with
-[the recommended font](#meslo-nerd-font-patched-for-powerlevel10k) and Tango Dark color palette with
+[the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k) and Tango Dark color palette with
 custom background color (`#171A1B` instead of `#2E3436` -- twice as dark).
 
 ![GNOME Terminal Color Settings](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/gnome-terminal-colors.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/gnome-terminal-colors.png)
 
 Syntax highlighting, where present, was provided by [zsh-syntax-highlighting](
   https://github.com/zsh-users/zsh-syntax-highlighting).
 
 ### How was the recommended font created?
 
-[The recommended font](#meslo-nerd-font-patched-for-powerlevel10k) is the product of many
+[The recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k) is the product of many
 individuals. Its origin is *Bitstream Vera Sans Mono*, which has given birth to *Menlo*, which in
 turn has spawned *Meslo*. Finally, extra glyphs have been added to *Meslo* with scripts forked
 from Nerd Fonts. The final font is released under the terms of
 [Apache License](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20License.txt).
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/MesloLGS%20NF%20License.txt).
 
 MesloLGS NF font can be recreated with the following command (requires `git` and `docker`):
 
@@ -1525,15 +1525,15 @@ cd nerd-fonts
 
 If everything goes well, four `ttf` files will appear in `./out`.
 
-### How to package Powerlevel10k for distribution?
+### How to package Powerlevel13.2k for distribution?
 
-It's currently neither easy nor recommended to package and distribute Powerlevel10k. There are no
+It's currently neither easy nor recommended to package and distribute Powerlevel13.2k. There are no
 instructions you can follow that would allow you to easily update your package when new versions of
-Powerlevel10k are released. This may change in the future but not soon.
+Powerlevel13.2k are released. This may change in the future but not soon.
 
 ## Troubleshooting
 
-- [`[oh-my-zsh] theme 'powerlevel10k/powerlevel10k' not found`](#oh-my-zsh-theme-powerlevel10kpowerlevel10k-not-found)
+- [`[oh-my-zsh] theme 'powerlevel13.2k/powerlevel13.2k' not found`](#oh-my-zsh-theme-powerlevel13.2kpowerlevel13.2k-not-found)
 - [Question mark in prompt](#question-mark-in-prompt)
 - [Icons, glyphs or powerline symbols don't render](#icons-glyphs-or-powerline-symbols-dont-render)
 - [Sub-pixel imperfections around powerline symbols](#sub-pixel-imperfections-around-powerline-symbols)
@@ -1549,7 +1549,7 @@ Powerlevel10k are released. This may change in the future but not soon.
   - [Extra or missing spaces around icons](#extra-or-missing-spaces-around-icons)
 - [Weird things happen after typing `source ~/.zshrc`](#weird-things-happen-after-typing-source-zshrc)
 - [Transient prompt stops working after some time](#transient-prompt-stops-working-after-some-time)
-- [Cannot make Powerlevel10k work with my plugin manager](#cannot-make-powerlevel10k-work-with-my-plugin-manager)
+- [Cannot make Powerlevel13.2k work with my plugin manager](#cannot-make-powerlevel13.2k-work-with-my-plugin-manager)
 - [Directory is difficult to see in prompt when using Rainbow style](#directory-is-difficult-to-see-in-prompt-when-using-rainbow-style)
 - [Incorrect foreground color in VSCode Terminal.](#incorrect-foreground-color-in-vscode-terminal)
 - [Horrific mess when resizing terminal window](#horrific-mess-when-resizing-terminal-window)
@@ -1557,24 +1557,24 @@ Powerlevel10k are released. This may change in the future but not soon.
 - [Arch Linux logo has a dot in the bottom right corner](#arch-linux-logo-has-a-dot-in-the-bottom-right-corner)
 - [Incorrect git status in prompt](#incorrect-git-status-in-prompt)
 
-### `[oh-my-zsh] theme 'powerlevel10k/powerlevel10k' not found`
+### `[oh-my-zsh] theme 'powerlevel13.2k/powerlevel13.2k' not found`
 
 When opening a terminal, or starting zsh manually, you may encounter this error message:
 
 ```text
-[oh-my-zsh] theme 'powerlevel10k/powerlevel10k' not found
+[oh-my-zsh] theme 'powerlevel13.2k/powerlevel13.2k' not found
 ```
 
-1. First, run `typeset -p P9K_VERSION` to check whether Powerlevel10k has been loaded.
+1. First, run `typeset -p P9K_VERSION` to check whether Powerlevel13.2k has been loaded.
    - If `typeset -p P9K_VERSION` succeeds and prints something like `typeset P9K_VERSION=1.19.14`
      (the version could be different), remove the following line from `~/.zshrc`:
      ```zsh
-     ZSH_THEME="powerlevel10k/powerlevel10k"
+     ZSH_THEME="powerlevel13.2k/powerlevel13.2k"
      ```
    - If `typeset -p P9K_VERSION` fails with the error `typeset: no such variable: P9K_VERSION`, run
      the following command:
      ```zsh
-     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+     git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel13.2k
      ```
 2. Restart Zsh with `exec zsh`.
 
@@ -1582,7 +1582,7 @@ When opening a terminal, or starting zsh manually, you may encounter this error 
 
 If it looks like a regular `?`, that's normal. It means you have untracked files in the current Git
 repository. Type `git status` to see these files. You can change this symbol or disable the display
-of untracked files altogether. Search for `untracked files` in `~/.p10k.zsh`.
+of untracked files altogether. Search for `untracked files` in `~/.p13.2k.zsh`.
 
 *FAQ*: [What do different symbols in Git status mean?](
   #what-do-different-symbols-in-git-status-mean)
@@ -1593,13 +1593,13 @@ some glyphs. See [icons, glyphs or powerline symbols don't render](
 
 ### Icons, glyphs or powerline symbols don't render
 
-Restart your terminal, [install the recommended font](#meslo-nerd-font-patched-for-powerlevel10k)
-and run `p10k configure`.
+Restart your terminal, [install the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k)
+and run `p13.2k configure`.
 
 ### Sub-pixel imperfections around powerline symbols
 
 ![Powerline Prompt Imperfections](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/powerline-imperfections.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/powerline-imperfections.png)
 
 There are three imperfections on the screenshot. From left to right:
 
@@ -1614,14 +1614,14 @@ screen is made of monospace characters. A white powerline prompt segment is made
 background followed by U+E0B0 (a right-pointing triangle).
 
 ![Powerline Prompt Imperfections](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/powerline-anatomy.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/powerline-anatomy.png)
 
-If Powerlevel10k prompt has imperfections around powerline symbols, you'll see exactly the same
+If Powerlevel13.2k prompt has imperfections around powerline symbols, you'll see exactly the same
 imperfections with all powerline themes (Agnoster, Powerlevel9k, Powerline, etc.)
 
 There are several things you can try to deal with these imperfections:
 
-- Try [the recommended font](#meslo-nerd-font-patched-for-powerlevel10k). If you are already using
+- Try [the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k). If you are already using
   it, switching to another font may help but is unlikely.
 - Change terminal font size one point up or down. For example, in iTerm2 powerline prompt looks
   perfect at font sizes 11 and 13 but breaks down at 12.
@@ -1630,7 +1630,7 @@ There are several things you can try to deal with these imperfections:
 - Shift all text one pixel up/down/left/right if your terminal has an option to do so.
 - Try a different terminal.
 
-A more radical solution is to switch to prompt style without background. Type `p10k configure` and
+A more radical solution is to switch to prompt style without background. Type `p13.2k configure` and
 select *Lean*. This style has a modern lightweight look. As a bonus, it doesn't suffer from
 rendering imperfections that afflict powerline-style prompt.
 
@@ -1638,7 +1638,7 @@ rendering imperfections that afflict powerline-style prompt.
 
 Type `echo '\u276F'`. If you get an error saying "zsh: character not in range", your locale
 doesn't support UTF-8. You need to fix it. If you are running Zsh over SSH, see
-[this](https://github.com/romkatv/powerlevel10k/issues/153#issuecomment-518347833). If you are
+[this](https://github.com/romkatv/powerlevel13.2k/issues/153#issuecomment-518347833). If you are
 running Zsh locally, Google "set UTF-8 locale in *your OS*".
 
 ### Cursor is in the wrong place
@@ -1647,8 +1647,8 @@ Type `echo '\u276F'`. If you get an error saying "zsh: character not in range", 
 [previous section](#zsh-character-not-in-range).
 
 If the `echo` command prints `❯` but the cursor is still in the wrong place, install
-[the recommended font](#meslo-nerd-font-patched-for-powerlevel10k) and run
-`p10k configure`.
+[the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k) and run
+`p13.2k configure`.
 
 If this doesn't help, add `unset ZLE_RPROMPT_INDENT` at the bottom of `~/.zshrc`.
 
@@ -1671,7 +1671,7 @@ Still having issues? Run the following command to diagnose the problem:
 
 ```text
 +------------------------------+
-| romka@adam ✓ ~/powerlevel10k |
+| romka@adam ✓ ~/powerlevel13.2k |
 +------------------------------+
 ```
 
@@ -1689,26 +1689,26 @@ culprits. Open an issue if you get stuck.
 
 ```text
 +-----------------------------+
-| romka@adam ✓ ~/powerlevel10k |
+| romka@adam ✓ ~/powerlevel13.2k |
 +-----------------------------+
 ```
 
 This is usually caused by a terminal bug or misconfiguration that makes it print ambiguous-width
 characters as double-width instead of single width. For example,
-[this issue](https://github.com/romkatv/powerlevel10k/issues/165).
+[this issue](https://github.com/romkatv/powerlevel13.2k/issues/165).
 
 #### If the prompt line is shorter than the frame and is mangled
 
 ```text
 +------------------------------+
-| romka@adam ✓~/powerlevel10k |
+| romka@adam ✓~/powerlevel13.2k |
 +------------------------------+
 ```
 
 Note that this prompt is different from the original as it's missing a space after the check mark.
 
 This can be caused by a low-level bug in macOS. See
-[this issue](https://github.com/romkatv/powerlevel10k/issues/241).
+[this issue](https://github.com/romkatv/powerlevel13.2k/issues/241).
 
 This can also happen if prompt contains glyphs designated as "wide" in the Unicode standard and your
 terminal incorrectly displays them as non-wide. Terminals suffering from this limitation include
@@ -1719,12 +1719,12 @@ remove all wide glyphs from prompt.
 
 ```text
 +--------------------------------+
-| romka@adam ✓ ~/powerlevel10k |
+| romka@adam ✓ ~/powerlevel13.2k |
 +--------------------------------+
 ```
 
 This can be caused by misconfigured locale. See
-[this issue](https://github.com/romkatv/powerlevel10k/issues/251).
+[this issue](https://github.com/romkatv/powerlevel13.2k/issues/251).
 
 ### Prompt wrapping around in a weird way
 
@@ -1736,12 +1736,12 @@ See [cursor is in the wrong place](#cursor-is-in-the-wrong-place).
 
 ### Configuration wizard runs automatically every time Zsh is started
 
-When Powerlevel10k starts, it automatically runs `p10k configure` if no `POWERLEVEL9K_*`
+When Powerlevel13.2k starts, it automatically runs `p13.2k configure` if no `POWERLEVEL9K_*`
 parameters are defined. Based on your prompt style choices, the configuration wizard creates
-`~/.p10k.zsh` with a bunch of `POWERLEVEL9K_*` parameters in it and adds a line to `~/.zshrc` to
+`~/.p13.2k.zsh` with a bunch of `POWERLEVEL9K_*` parameters in it and adds a line to `~/.zshrc` to
 source this file. The next time you start Zsh, the configuration wizard shouldn't run automatically.
 If it does, this means the evaluation of `~/.zshrc` terminates prematurely before it reaches the
-line that sources `~/.p10k.zsh`. This most often happens due to syntax errors in `~/.zshrc`. These
+line that sources `~/.p13.2k.zsh`. This most often happens due to syntax errors in `~/.zshrc`. These
 errors get hidden by the configuration wizard screen, so you don't notice them. When you exit
 configuration wizard, look for error messages. You can also use
 `POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true zsh` to start Zsh without automatically running the
@@ -1769,12 +1769,12 @@ When `MULTIBYTE` is enabled and a UTF-8 locale is available, the first few quest
 configuration wizard assess capabilities of the terminal font. If your answers indicate that some
 glyphs don't render correctly, configuration wizard won't offer prompt styles that use them. *Fix*:
 Restart your terminal and install
-[the recommended font](#meslo-nerd-font-patched-for-powerlevel10k). Verify by running
-`p10k configure` and checking that all glyphs render correctly.
+[the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k). Verify by running
+`p13.2k configure` and checking that all glyphs render correctly.
 
 ### Cannot install the recommended font
 
-Once you download [the recommended font](#meslo-nerd-font-patched-for-powerlevel10k),
+Once you download [the recommended font](#meslo-nerd-font-patched-for-powerlevel13.2k),
 you can install it just like any other font. Google "how to install fonts on *your OS*".
 
 ### Extra or missing spaces in prompt compared to Powerlevel9k
@@ -1782,7 +1782,7 @@ you can install it just like any other font. Google "how to install fonts on *yo
 tl;dr: Add `ZLE_RPROMPT_INDENT=0` and `POWERLEVEL9K_LEGACY_ICON_SPACING=true` to `~/.zshrc` to get
 the same prompt spacing as in Powerlevel9k.
 
-When using Powerlevel10k with a Powerlevel9k config, you might get additional spaces in prompt here
+When using Powerlevel13.2k with a Powerlevel9k config, you might get additional spaces in prompt here
 and there. These come in two flavors.
 
 #### Extra space without background on the right side of right prompt
@@ -1801,13 +1801,13 @@ From [Zsh documentation](
 > Typically this will be used to set the value to `0` so that the prompt appears flush with the
 > right hand side of the screen.
 
-Powerlevel10k respects this parameter. If you set `ZLE_RPROMPT_INDENT=1` (or leave it unset, which
+Powerlevel13.2k respects this parameter. If you set `ZLE_RPROMPT_INDENT=1` (or leave it unset, which
 is the same thing as setting it to `1`), you'll get an empty space to the right of right prompt. If
 you set `ZLE_RPROMPT_INDENT=0`, your prompt will go to the edge of the terminal. This is how it
 works in every theme except Powerlevel9k.
 
-![ZLE_RPROMPT_INDENT: Powerlevel10k vs Powerlevel9k](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/p9k-vs-p10k-zle-rprompt-indent.png)
+![ZLE_RPROMPT_INDENT: Powerlevel13.2k vs Powerlevel9k](
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/p9k-vs-p13.2k-zle-rprompt-indent.png)
 
 Powerlevel9k issue: [powerlevel9k#1292](https://github.com/Powerlevel9k/powerlevel9k/issues/1292).
 It's been fixed in the development branch of Powerlevel9k but the fix hasn't yet made it to
@@ -1817,7 +1817,7 @@ Add `ZLE_RPROMPT_INDENT=0` to `~/.zshrc` to get the same spacing on the right ed
 Powerlevel9k.
 
 *Note:* Several versions of Zsh have bugs that get triggered when you set `ZLE_RPROMPT_INDENT=0`.
-Powerlevel10k can work around these bugs when using powerline prompt style. If you notice visual
+Powerlevel13.2k can work around these bugs when using powerline prompt style. If you notice visual
 artifacts in prompt, or wrong cursor position, try removing `ZLE_RPROMPT_INDENT` from `~/.zshrc`.
 
 #### Extra or missing spaces around icons
@@ -1827,19 +1827,19 @@ icons as in Powerlevel9k.
 
 Spacing around icons in Powerlevel9k is inconsistent.
 
-![ZLE_RPROMPT_INDENT: Powerlevel10k vs Powerlevel9k](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/p9k-vs-p10k-icon-spacing.png)
+![ZLE_RPROMPT_INDENT: Powerlevel13.2k vs Powerlevel9k](
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/p9k-vs-p13.2k-icon-spacing.png)
 
-This inconsistency is a constant source of annoyance, so it was fixed in Powerlevel10k. You can add
+This inconsistency is a constant source of annoyance, so it was fixed in Powerlevel13.2k. You can add
 `POWERLEVEL9K_LEGACY_ICON_SPACING=true` to `~/.zshrc` to get the same spacing around icons as in
 Powerlevel9k.
 
 *Note:* It's not a good idea to define `POWERLEVEL9K_LEGACY_ICON_SPACING` when using
-`p10k configure`.
+`p13.2k configure`.
 
 ### Weird things happen after typing `source ~/.zshrc`
 
-It's almost always a bad idea to run `source ~/.zshrc`, whether you are using Powerlevel10k or not.
+It's almost always a bad idea to run `source ~/.zshrc`, whether you are using Powerlevel13.2k or not.
 This command may result in random errors, misbehaving code and progressive slowdown of Zsh.
 
 If you've made changes to `~/.zshrc` or to files sourced by it, restart Zsh to apply them. The most
@@ -1852,10 +1852,10 @@ than `source ~/.zshrc`.
 See [weird things happen after typing `source ~/.zshrc`](
   #weird-things-happen-after-typing-source-zshrc).
 
-### Cannot make Powerlevel10k work with my plugin manager
+### Cannot make Powerlevel13.2k work with my plugin manager
 
 If the [installation instructions](#installation) didn't work for you, try disabling your current
-theme (so that you end up with no theme) and then installing Powerlevel10k manually.
+theme (so that you end up with no theme) and then installing Powerlevel13.2k manually.
 
 1. Disable the current theme in your framework / plugin manager.
 
@@ -1869,11 +1869,11 @@ theme (so that you end up with no theme) and then installing Powerlevel10k manua
 - **antigen:** Open `~/.zshrc` and remove the line that sets `antigen theme`. It might look like
   this: `antigen theme powerlevel9k/powerlevel9k`.
 
-2. Install Powerlevel10k manually.
+2. Install Powerlevel13.2k manually.
 
 ```zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+git clone --depth=1 https://github.com/romkatv/powerlevel13.2k.git ~/powerlevel13.2k
+echo 'source ~/powerlevel13.2k/powerlevel13.2k.zsh-theme' >>~/.zshrc
 ```
 
 This method of installation won't make anything slower or otherwise sub-par.
@@ -1886,14 +1886,14 @@ terminal color palette. If it's very light, it may be difficult to see white tex
 
 There are several ways to fix this.
 
-- Type `p10k configure` and choose a more readable prompt style.
+- Type `p13.2k configure` and choose a more readable prompt style.
 - [Change terminal color palette](#change-the-color-palette-used-by-your-terminal). Try Tango Dark
   or Solarized Dark, or change just the "blue" color.
-- [Change directory background and/or foreground color](#set-colors-through-Powerlevel10k-configuration-parameters).
+- [Change directory background and/or foreground color](#set-colors-through-Powerlevel13.2k-configuration-parameters).
   The parameters you are looking for are called `POWERLEVEL9K_DIR_BACKGROUND`,
   `POWERLEVEL9K_DIR_FOREGROUND`, `POWERLEVEL9K_DIR_SHORTENED_FOREGROUND`,
   `POWERLEVEL9K_DIR_ANCHOR_FOREGROUND` and `POWERLEVEL9K_DIR_ANCHOR_BOLD`. You can find them in
-  `~/.p10k.zsh`.
+  `~/.p13.2k.zsh`.
 
 *Related*: [Incorrect foreground color in VSCode Terminal.](#incorrect-foreground-color-in-vscode-terminal)
 
@@ -1909,14 +1909,14 @@ VSCode settings.
 When you resize a terminal window horizontally back and forth a few times, you might see this ugly
 picture.
 
-![Powerlevel10k Resizing Mess](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resizing-mess.png)
+![Powerlevel13.2k Resizing Mess](
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resizing-mess.png)
 
 tl;dr: This issue arises when a terminal reflows Zsh prompt upon resizing. It isn't specific to
-Powerlevel10k. See [mitigation](#mitigation).
+Powerlevel13.2k. See [mitigation](#mitigation).
 
 *Note: This section [used to say](
-  https://github.com/romkatv/powerlevel10k/blob/dce00cdb5daaa8a519df234a7012ba3257b644d4/README.md#horrific-mess-when-resizing-terminal-window)
+  https://github.com/romkatv/powerlevel13.2k/blob/dce00cdb5daaa8a519df234a7012ba3257b644d4/README.md#horrific-mess-when-resizing-terminal-window)
 that the problem is caused by a bug in Zsh. While it's true that it's possible to avoid the problem
 in many circumstances by modifying Zsh, it cannot be completely resolved this way. Thus it's unfair
 to pin the blame on Zsh.*
@@ -1932,17 +1932,17 @@ lines that no longer fit: *reflow* or *truncate*.
 Terminal content before shrinking:
 
 ![Terminal Content Before Shrinking](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-original.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-original.png)
 
 Terminal reflows text when shrinking:
 
 ![Terminal Reflows Text When Shrinking](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-reflow.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-reflow.png)
 
 Terminal truncates text when shrinking:
 
 ![Terminal Truncates Text When Shrinking](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-truncate.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-truncate.png)
 
 Reflowing strategy can change the height of terminal content. If such content happens to be between
 the start of the current prompt and the cursor, Zsh will print prompt on the wrong line. Truncation
@@ -1965,13 +1965,13 @@ When `PROMPT` gets expanded, it calls `pause` to let us observe the state of the
 the initial state:
 
 ![Terminal Resizing Bug 1](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-bug-1.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-bug-1.png)
 
 Zsh keeps track of the cursor position relative to the start of the current prompt. In this case it
 knows that the cursor is one line below. When we shrink the terminal window, it looks like this:
 
 ![Terminal Resizing Bug 2](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-bug-2.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-bug-2.png)
 
 At this point the terminal sends `SIGWINCH` to Zsh to notify it about changes in the terminal
 dimensions. Note that this signal is sent *after* the content of the terminal has been reflown.
@@ -1983,7 +1983,7 @@ no longer one line above the cursor. It's two lines above! Zsh ends up printing 
 too low.
 
 ![Terminal Resizing Bug 3](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-bug-3.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-bug-3.png)
 
 In this case we ended up with unwanted junk content because `VD` has *increased*. When you make
 terminal window wider, `VD` can also *decrease*, which would result in the new prompt being printed
@@ -1994,11 +1994,11 @@ Here are a few more examples where shrinking terminal window increased `VD`.
 - Simple one-line left prompt with right prompt. No `prompt_subst`. Note that the cursor is below
   the prompt line (hit *ESC-ENTER* to get it there).
   ![Zsh Prompt That Breaks on Terminal Shrinking 1](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-breakable-1.png)
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-breakable-1.png)
 - Simple one-line left prompt. No `prompt_subst`, no right prompt. Here `VD` is bound to increase
   upon terminal shrinking due to the command line wrapping around.
   ![Zsh Prompt That Breaks on Terminal Shrinking 2](
-    https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/resize-breakable-2.png)
+    https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/resize-breakable-2.png)
 
 #### Zsh patch
 
@@ -2034,8 +2034,8 @@ There is no ETA for the patch making its way into upstream Zsh. See [discussion]
 There are a few mitigation options for this issue.
 
 - Use [kitty](https://sw.kovidgoyal.net/kitty/) terminal version >= 0.24.0 and enable terminal-shell
-  integration in Powerlevel10k by defining `POWERLEVEL9K_TERM_SHELL_INTEGRATION=true` in
-  `~/.p10k.zsh`.
+  integration in Powerlevel13.2k by defining `POWERLEVEL9K_TERM_SHELL_INTEGRATION=true` in
+  `~/.p13.2k.zsh`.
 - Apply [the patch](#zsh-patch) and [rebuild Zsh from source](
     https://github.com/zsh-users/zsh/blob/master/INSTALL). It won't help if you are using Alacritty,
   kitty or some other terminal that reflows text on resize but doesn't reflow saved cursor position.
@@ -2060,7 +2060,7 @@ When using Konsole with a non-monospace font, icons may be cut off on the right 
 for glyphs designated as "wide" in the Unicode standard.
 
 ![Icons cut off in Konsole](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/konsole-non-monospace-font.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/konsole-non-monospace-font.png)
 
 The last line on the screenshot shows a cut off Arch Linux logo.
 
@@ -2069,18 +2069,18 @@ There are several mitigation options for this issue.
 1. Use a different terminal. Konsole is the only terminal that exhibits this behavior.
 2. Use a monospace font.
 3. Manually add an extra space after the icon that gets cut off. For example, if the content of
-   `os_icon` prompt segment gets cut off, open `~/.p10k.zsh`, search for
+   `os_icon` prompt segment gets cut off, open `~/.p13.2k.zsh`, search for
    `POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION` and change it as follows:
 ```zsh
 typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT} '  # extra space at the end
 ```
 4. Use a different icon that is monospace. For example, if Arch Linux logo gets cut off, add
-   the following parameter to `~/.p10k.zsh`:
+   the following parameter to `~/.p13.2k.zsh`:
 ```zsh
 typeset -g POWERLEVEL9K_LINUX_ARCH_ICON='Arch'  # plain "Arch" in place of a logo
 ```
 5. Disable the display of the icon that gets cut off. For example, if the content of
-   `os_icon` prompt segment gets cut off, open `~/.p10k.zsh` and remove `os_icon` from
+   `os_icon` prompt segment gets cut off, open `~/.p13.2k.zsh` and remove `os_icon` from
    `POWERLEVEL9K_LEFT_PROMPT_ELEMENTS` and `POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS`.
 
 *Note*: [Non-monospace fonts are not officially supported by Konsole](
@@ -2089,13 +2089,13 @@ typeset -g POWERLEVEL9K_LINUX_ARCH_ICON='Arch'  # plain "Arch" in place of a log
 ### Arch Linux logo has a dot in the bottom right corner
 
 ![Arch Linux Logo with a dot](
-  https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/arch-linux-logo-dot.png)
+  https://raw.githubusercontent.com/romkatv/powerlevel13.2k-media/master/arch-linux-logo-dot.png)
 
 Some fonts have this incorrect dotted icon in bold typeface. There are two ways to fix this issue.
 
 1. Use a font with a correct Arch Linux logo in bold typeface. For example,
-  [the recommended Powerlevel10k font](#meslo-nerd-font-patched-for-powerlevel10k).
-2. Display the icon in regular (non-bold) typeface. To do this, open `~/.p10k.zsh`, search for
+  [the recommended Powerlevel13.2k font](#meslo-nerd-font-patched-for-powerlevel13.2k).
+2. Display the icon in regular (non-bold) typeface. To do this, open `~/.p13.2k.zsh`, search for
    `POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION` and remove `%B` from its value.
 ```zsh
 typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'  # not bold
@@ -2103,11 +2103,11 @@ typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'  # not bold
 
 ### Incorrect git status in prompt
 
-Powerlevel10k uses [gitstatusd](https://github.com/romkatv/gitstatus) to inspect the state of git
+Powerlevel13.2k uses [gitstatusd](https://github.com/romkatv/gitstatus) to inspect the state of git
 repositories. The project relies on the [libgit2](https://github.com/libgit2/libgit2) library, which
 has some gaps in its implementation. Under some conditions, this may result in discrepancies between
 the real state of a git repository (reflected by `git status`) and what gets shown in the
-Powerlevel10k prompt.
+Powerlevel13.2k prompt.
 
 Most notably, [libgit2 does not support `skipHash`](https://github.com/libgit2/libgit2/issues/6531).
 If you see incorrect git status in prompt, run `git config -l` and check whether `skipHash` is
